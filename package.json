@@ -1,0 +1,17 @@
+{
+  "name": "arpanet-map",
+  "version": "1.0.0",
+  "description": "Interactive web-based visualization of ARPANET",
+  "main": "index.js",
+  "scripts": {
+    "start": "node model.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elliot Miller",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "mysql2": "^2.0.2",
+    "sequelize": "^5.21.2"
+  }
+}

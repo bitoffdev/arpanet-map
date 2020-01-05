@@ -11,7 +11,7 @@
     </style>
 
     <script>
-        var myGeoJSONPath = 'custom.geo.json';
+        var myGeoJSONPath = '1970-12.geo.json';
         $.getJSON(myGeoJSONPath,function(data){
             var $map = document.createElement("div");
             $map.setAttribute("class", "map");
@@ -20,8 +20,16 @@
 
             L.geoJson(data, {
                 clickable: false,
+                pointToLayer: function(geoJsonPoint, latlng) {
+                    return L.circleMarker(latlng);
+                },
                 onEachFeature: function(feature, layer) {
-                    layer.bindTooltip(feature.properties.name, {permanent:false,direction:'center'});
+                    const name = feature.properties.name;
+                    if (name)
+                        layer.bindTooltip(name, {
+                            permanent: true,
+                            opacity: 0.7,
+                        });
                 }
             }).addTo(map);
         })
