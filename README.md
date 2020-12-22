@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Arpanet Map
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Background
 
-## Available Scripts
+During my Fall 2019 semester of college, I became particularly interested in
+one of the most significant predecessors to the internet as we know it today.
 
-In the project directory, you can run:
+I wanted to make a visualization of how Arpanet changed over the years.
 
-### `yarn start`
+When picking a format to represent the data, I didn't find a schema that
+perfectly suited my needs, so I decided to write my own using SQL. However,
+there are other great formats that suit various needs for me. For example,
+GeoJSON is great for displaying geographical data. GeoJSON integrates with
+Leaflet.js and other front-end frameworks to display maps with minimal work.
+For this reason, I have written scripts to build GeoJSON from my SQL schema.
+Some data is lost, but this is for display only, so it's okay. The master copy
+of the data is still stored via SQL.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Building the Static Website
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Start mysql populated with the Arpanet data.
 
-### `yarn test`
+```bash
+docker run
+  --rm -it -p 3306:3306
+  --mount "type=bind,src=$PWD/arpanet.sql,dst=/docker-entrypoint-initdb.d/arpanet.sql"
+  --env MYSQL_ROOT_PASSWORD=password
+  --env MYSQL_DATABASE=arpanet
+  mysql
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install node.js 12.x.
 
-### `yarn build`
+Install the node.js dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Build the GeoJSON files.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+yarn buildMaps
+```
 
-### `yarn eject`
+Start the local development server
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project was bootstrapped with `create-react-app`. See the [original README.md](docs/create_react_app.md) form more information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Appendix
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Viewing and Editing the Database
 
-## Learn More
+Using [mysqlsh][mysqlsh]
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+mysqlsh root:password@localhost:3306/arpanet --sql
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[mysqlsh]: https://dev.mysql.com/doc/mysql-shell/en/mysqlsh.html
