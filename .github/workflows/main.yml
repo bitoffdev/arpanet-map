@@ -32,7 +32,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       - name: Load data into mysql
         run: |
           sudo apt-get update &&
@@ -50,7 +50,10 @@ jobs:
           yarn build
 
       - name: Build geoJSON Maps
-        run: yarn buildMaps
+        run: |
+          yarn buildMaps &&
+          cp public/mapsManifest.json public/*.geo.json build
+
 
       - name: Create a new commit to gh-pages
         run: |
