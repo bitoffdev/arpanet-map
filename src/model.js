@@ -48,6 +48,8 @@ var Gateway = sequelize.define("gateway", {
     min: -180,
     max: +180,
   },
+  address: Sequelize.STRING,
+  wikidata_id: Sequelize.STRING,
 });
 
 var Version = sequelize.define("version", {

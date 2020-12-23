@@ -75,6 +75,9 @@ const buildGeoJson = async (mapVersion) => {
       type: "Feature",
       properties: {
         name: gateway.dataValues.short_name,
+        longName: gateway.dataValues.long_name,
+        address: gateway.dataValues.address,
+        wikidataId: gateway.dataValues.wikidata_id,
       },
       geometry: {
         type: "Point",

@@ -1,12 +1,9 @@
-import Leaflet, { PathOptions } from "leaflet";
-import {
-  initialize,
-  resetMarker,
-  getMarkers,
-} from "leaflet-tooltip-layout";
-import { MapContainer, useMap } from "react-leaflet";
 import Tabs, { TabPane } from "rc-tabs";
 import { useEffect, useState } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { MapContainer } from "react-leaflet";
+import Sidebar from "react-sidebar";
+import styled, { createGlobalStyle } from "styled-components";
 
 import "fontsource-overpass";
 
@@ -14,9 +11,8 @@ import "fontsource-overpass";
 import "leaflet/dist/leaflet.css";
 import "rc-tabs/assets/index.css";
 
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-
-import styled, { createGlobalStyle } from "styled-components";
+import GatewayDetail from "./GatewayDetail";
+import Network from "./MapContents";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -89,79 +85,15 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const defaultIcon = Leaflet.icon({
-  //
-  // Note: I did not have success using Webpack's base64 data-url image loader here, so for now I will load the image separately. It could be an issue with Leaflet, but I'd need to look into this further to pinpoint the issue.
-  //
-  iconUrl: "circle-grey.png",
-  iconSize: [10, 10],
-});
-
-function Network({ url }: { url: string }): null {
-  const map = useMap();
-
-  const [geoJsonLayer, setGeoJsonLayer] = useState<any | null>(null);
-  const [data, setData] = useState(null);
-
-  const loadData = (key: string): void => {
-    // clear all the existing markers from leaflet-tooltip-layout to avoid getting an error
-    getMarkers().length = 0;
-    // load the geoJSON data
-    fetch(key)
-      .then((result) => result.json())
-      .then((json) => setData(json));
-  };
-
-  useEffect(() => loadData(url), [url]);
-
-  useEffect(() => {
-    // clear the previous map
-    map.eachLayer((layer) => {
-      layer.remove();
-    });
-
-    const _geoJsonLayer = Leaflet.geoJSON(data ?? undefined, {
-      style: feature => {
-        const s: PathOptions = {};
-
-        if (feature?.properties?.filename === "USA.geojson") {
-          s.color = '#00aa00';
-          // background map should not be clickable
-          s.interactive = false;
-        }
-
-        return s;
-      },
-      pointToLayer: (geoJsonPoint, latlng) =>
-        Leaflet.marker(latlng, { icon: defaultIcon }),
-      onEachFeature: function (feature, layer) {
-        // only consider point features, skip polylines, etc
-        if (feature?.geometry?.type !== "Point") return;
-
-        const name = feature.properties.name;
-        const marker = layer;
-        marker.bindTooltip(name, { permanent: true }).addTo(map);
-        resetMarker(marker);
-        // The `leaflet-tooltip-layout` library overwrites the className option on tooltips, so this next line is a workaround. Note that the `addTo` call following `bindTooltip` above is a pre-requisite for this line to work.
-        marker.getTooltip()?.getElement()?.classList.add(tooltipClassName);
-      },
-    }).addTo(map);
-
-    setGeoJsonLayer(_geoJsonLayer);
-  }, [data, map]);
-
-  useEffect(() => {
-    initialize(map);
-  }, [geoJsonLayer, map]);
-
-  return null;
-}
-
-type ManifestMapType = { fileName: string, partialDateString: string };
+type ManifestMapType = { fileName: string; partialDateString: string };
 
 function App() {
+  const [focusedGateway, setFocusedGateway] = useState<any>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [activeKey, setActiveKey] = useState<string | null>(null);
-  const [manifest, setManifest] = useState<{ snapshots: Array<ManifestMapType> } | null>(null);
+  const [manifest, setManifest] = useState<{
+    snapshots: Array<ManifestMapType>;
+  } | null>(null);
 
   const loadManifest = () =>
     fetch("mapsManifest.json")
@@ -178,7 +110,7 @@ function App() {
     loadManifest();
   }, [manifest]);
 
-  const nextActiveMap = (steps: number)  =>
+  const nextActiveMap = (steps: number) =>
     setActiveKey((activeKey) => {
       if (manifest?.snapshots == null || manifest.snapshots.length <= 1)
         return activeKey;
@@ -194,41 +126,56 @@ function App() {
     });
 
   return (
-    <StyledContainer>
-      <GlobalStyle />
-      <MapContainer
-        style={{ flex: 1 }}
-        center={[39.74739, -105]}
-        zoom={4}
-        scrollWheelZoom={true}
-      >
-        {activeKey &&
-        <Network url={activeKey} />
-        }
-      </MapContainer>
-      <StyledTabs
-        activeKey={activeKey ?? undefined}
-        onChange={setActiveKey}
-        tabBarStyle={{ flex: 1 }}
-        tabBarExtraContent={{
-          left: (
-            <StyledButton onClick={() => nextActiveMap(-1)}>
-              <FaAngleLeft />
-            </StyledButton>
-          ),
-          right: (
-            <StyledButton onClick={() => nextActiveMap(1)}>
-              <FaAngleRight />
-            </StyledButton>
-          ),
-        }}
-      >
-        {manifest &&
-          manifest.snapshots.map((snapshot) => (
-            <TabPane tab={snapshot.partialDateString} key={snapshot.fileName} />
-          ))}
-      </StyledTabs>
-    </StyledContainer>
+    <Sidebar
+      sidebar={focusedGateway && <GatewayDetail gateway={focusedGateway} />}
+      open={isSidebarOpen}
+      onSetOpen={setIsSidebarOpen}
+      styles={{ sidebar: { background: "white" } }}
+      pullRight={true}
+    >
+      <StyledContainer>
+        <GlobalStyle />
+        <MapContainer
+          style={{ flex: 1 }}
+          center={[39.74739, -105]}
+          zoom={4}
+          scrollWheelZoom={true}
+        >
+          {activeKey && (
+            <Network
+              url={activeKey}
+              setIsSidebarOpen={setIsSidebarOpen}
+              setFocusedGateway={setFocusedGateway}
+            />
+          )}
+        </MapContainer>
+        <StyledTabs
+          activeKey={activeKey ?? undefined}
+          onChange={setActiveKey}
+          tabBarStyle={{ flex: 1 }}
+          tabBarExtraContent={{
+            left: (
+              <StyledButton onClick={() => nextActiveMap(-1)}>
+                <FaAngleLeft />
+              </StyledButton>
+            ),
+            right: (
+              <StyledButton onClick={() => nextActiveMap(1)}>
+                <FaAngleRight />
+              </StyledButton>
+            ),
+          }}
+        >
+          {manifest &&
+            manifest.snapshots.map((snapshot) => (
+              <TabPane
+                tab={snapshot.partialDateString}
+                key={snapshot.fileName}
+              />
+            ))}
+        </StyledTabs>
+      </StyledContainer>
+    </Sidebar>
   );
 }
 
