@@ -1,4 +1,4 @@
-import Leaflet from "leaflet";
+import Leaflet, { PathOptions } from "leaflet";
 import {
   initialize,
   resetMarker,
@@ -122,12 +122,15 @@ function Network({ url }: { url: string }): null {
 
     const _geoJsonLayer = Leaflet.geoJSON(data ?? undefined, {
       style: feature => {
+        const s: PathOptions = {};
+
         if (feature?.properties?.filename === "USA.geojson") {
-          return {
-            color: "#00aa00"
-          };
+          s.color = '#00aa00';
+          // background map should not be clickable
+          s.interactive = false;
         }
-        return {};
+
+        return s;
       },
       pointToLayer: (geoJsonPoint, latlng) =>
         Leaflet.marker(latlng, { icon: defaultIcon }),
