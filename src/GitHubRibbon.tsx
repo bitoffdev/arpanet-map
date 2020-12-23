@@ -12,7 +12,7 @@ const StyledRibbonAnchor = styled.a`
   }
 `;
 
-export default (): React.ReactElement => (
+const GitHubRibbon = (): React.ReactElement => (
   <StyledRibbonAnchor href="https://github.com/bitoffdev/arpanet-map">
     <img
       loading="lazy"
@@ -22,3 +22,5 @@ export default (): React.ReactElement => (
     />
   </StyledRibbonAnchor>
 );
+
+export default GitHubRibbon;
