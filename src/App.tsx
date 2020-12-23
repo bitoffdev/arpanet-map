@@ -14,6 +14,7 @@ import "rc-tabs/assets/index.css";
 import GatewayDetail from "./GatewayDetail";
 import Network from "./MapContents";
 import { GatewayType, ManifestMapType } from "arpanet-map";
+import GitHubRibbon from "./GitHubRibbon";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -134,6 +135,7 @@ function App() {
       styles={{ sidebar: { background: "white" } }}
       pullRight={true}
     >
+      <GitHubRibbon />
       <StyledContainer>
         <GlobalStyle />
         <MapContainer
