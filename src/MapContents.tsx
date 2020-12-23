@@ -82,7 +82,7 @@ export default function MapContents({
     }).addTo(map);
 
     setGeoJsonLayer(_geoJsonLayer);
-  }, [data, map]);
+  }, [data, map, setFocusedGateway, setIsSidebarOpen]);
 
   useEffect(() => {
     initialize(map);
