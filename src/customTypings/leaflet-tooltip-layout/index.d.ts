@@ -1,17 +1,24 @@
 declare module "leaflet-tooltip-layout" {
+  import { Marker } from "leaflet";
 
   export interface InitializeFunction {
     (map: Map): void;
   }
 
-  export const initialize: InitializeFunction;
-
   export interface ResetMarkerFunction {
-    (marker: any): void;
+    (marker: Marker): void;
   }
 
-  export const resetMarker: ResetMarkerFunction;
+  export interface GetMarkersFunction {
+    (): Array<Marker>;
+  }
 
-  export const getMarkers: any;
-  export const removeAllPolyline: any;
+  export interface RemoveAllPolylineFunction {
+    (): void;
+  }
+
+  export const initialize: InitializeFunction;
+  export const resetMarker: ResetMarkerFunction;
+  export const getMarkers: GetMarkersFunction;
+  export const removeAllPolyline: RemoveAllPolylineFunction;
 }

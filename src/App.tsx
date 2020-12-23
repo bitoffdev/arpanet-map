@@ -13,6 +13,7 @@ import "rc-tabs/assets/index.css";
 
 import GatewayDetail from "./GatewayDetail";
 import Network from "./MapContents";
+import { GatewayType, ManifestMapType } from "arpanet-map";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -85,10 +86,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-type ManifestMapType = { fileName: string; partialDateString: string };
-
 function App() {
-  const [focusedGateway, setFocusedGateway] = useState<any>(null);
+  const [focusedGateway, setFocusedGateway] = useState<GatewayType | null>(
+    null
+  );
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [activeKey, setActiveKey] = useState<string | null>(null);
   const [manifest, setManifest] = useState<{

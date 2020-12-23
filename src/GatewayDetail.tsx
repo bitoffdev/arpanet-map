@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import WBK from "wikibase-sdk";
+import { GatewayType } from "arpanet-map";
 
 // const WBK = require('wikibase-sdk');
 const wdk = WBK({
@@ -15,7 +16,7 @@ const StyledGatewayDetailDiv = styled.div`
 `;
 
 type GatewayDetailProps = {
-  gateway: any;
+  gateway: GatewayType;
 };
 
 export default function GatewayDetail({ gateway }: GatewayDetailProps) {
@@ -24,7 +25,9 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
   useEffect(() => {
     setWikipediaUrl(null);
 
-    if (gateway.wikidataId == null) return;
+    // it seems like we need to unpack wikidataId for typescript to acknowledge the nullish check
+    const { wikidataId } = gateway;
+    if (wikidataId == null) return;
 
     const url = wdk.getEntities({
       ids: [gateway.wikidataId],
@@ -32,11 +35,11 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
     });
 
     fetch(url)
-      .then((response: any) => response.json())
+      .then((response) => response.json())
       .then(wdk.parse.wd.entities)
       .then((entities) => {
         console.log(entities);
-        const e = entities[gateway.wikidataId];
+        const e = entities[wikidataId];
         const wikipediaUrl = `https://en.wikipedia.org/wiki/${e.sitelinks.enwiki}`;
         console.log(wikipediaUrl);
         setWikipediaUrl(wikipediaUrl);

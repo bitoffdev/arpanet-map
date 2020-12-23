@@ -1,9 +1,19 @@
 import { useMap } from "react-leaflet";
 import { useEffect, useState } from "react";
 import { getMarkers, initialize, resetMarker } from "leaflet-tooltip-layout";
-import Leaflet, { PathOptions } from "leaflet";
+import Leaflet, { Marker, PathOptions } from "leaflet";
+import { GatewayType } from "arpanet-map";
 
 const tooltipClassName = "override-leaflet-tooltip-style";
+
+/**
+ * This is the check used in leaflet itself. Unfortunately, we have to use any here because the type definitions for leaflet types don't contain the information we need to check if the target is a marker.
+ *
+ * TODO find a way to do this without using the non-public _radius member
+ */
+function isMarker(target: any): target is Marker {
+  return target.getLatLng && (!target._radius || target._radius <= 10);
+}
 
 const defaultIcon = Leaflet.icon({
   //
@@ -13,18 +23,22 @@ const defaultIcon = Leaflet.icon({
   iconSize: [10, 10],
 });
 
+type MapContentsProps = {
+  url: string;
+  setIsSidebarOpen: (isSidebarOpen: boolean) => void;
+  setFocusedGateway: (focusedGateway: GatewayType) => void;
+};
+
 export default function MapContents({
   url,
   setIsSidebarOpen,
   setFocusedGateway,
-}: {
-  url: string;
-  setIsSidebarOpen: any;
-  setFocusedGateway: any;
-}): null {
+}: MapContentsProps): null {
   const map = useMap();
 
-  const [geoJsonLayer, setGeoJsonLayer] = useState<any | null>(null);
+  const [geoJsonLayer, setGeoJsonLayer] = useState<Leaflet.GeoJSON | null>(
+    null
+  );
   const [data, setData] = useState(null);
 
   const loadData = (key: string): void => {
@@ -75,7 +89,7 @@ export default function MapContents({
           setIsSidebarOpen(true);
           setFocusedGateway(feature.properties);
         });
-        resetMarker(marker);
+        if (isMarker(marker)) resetMarker(marker);
         // The `leaflet-tooltip-layout` library overwrites the className option on tooltips, so this next line is a workaround. Note that the `addTo` call following `bindTooltip` above is a pre-requisite for this line to work.
         marker.getTooltip()?.getElement()?.classList.add(tooltipClassName);
       },
