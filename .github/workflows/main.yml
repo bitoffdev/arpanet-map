@@ -49,6 +49,9 @@ jobs:
           yarn install
           yarn build
 
+      - name: Check that dependencies are compatible with MIT license
+        run: npx license-checker --onlyAllow 'MIT;BSD;Apache-2.0;CC0-1.0;CC-BY-3.0;CC-BY-4.0;ISC;Hippocratic-2.1;MPL-2.0;ODC-By-1.0;WTFPL;Unlicense'
+
       - name: Build geoJSON Maps
         run: |
           yarn buildMaps &&
