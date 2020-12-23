@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/arpanet-map/static/js/main.5e433b1a.chunk.js",
+    "main.js.map": "/arpanet-map/static/js/main.5e433b1a.chunk.js.map",
+    "runtime-main.js": "/arpanet-map/static/js/runtime-main.c8ae671d.js",
+    "runtime-main.js.map": "/arpanet-map/static/js/runtime-main.c8ae671d.js.map",
+    "static/css/2.df02d537.chunk.css": "/arpanet-map/static/css/2.df02d537.chunk.css",
+    "static/js/2.3f86613d.chunk.js": "/arpanet-map/static/js/2.3f86613d.chunk.js",
+    "static/js/2.3f86613d.chunk.js.map": "/arpanet-map/static/js/2.3f86613d.chunk.js.map",
+    "index.html": "/arpanet-map/index.html",
+    "static/css/2.df02d537.chunk.css.map": "/arpanet-map/static/css/2.df02d537.chunk.css.map",
+    "static/js/2.3f86613d.chunk.js.LICENSE.txt": "/arpanet-map/static/js/2.3f86613d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/arpanet-map/static/media/overpass-latin-ext-400-normal.63911e23.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8ae671d.js",
+    "static/css/2.df02d537.chunk.css",
+    "static/js/2.3f86613d.chunk.js",
+    "static/js/main.5e433b1a.chunk.js"
+  ]
+}
