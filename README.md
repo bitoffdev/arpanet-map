@@ -1,5 +1,7 @@
 # Arpanet Map
 
+![](docs/screenshot.png)
+
 ## Background
 
 During my Fall 2019 semester of college, I became particularly interested in
@@ -21,11 +23,11 @@ of the data is still stored via SQL.
 Start mysql populated with the Arpanet data.
 
 ```bash
-docker run
-  --rm -it -p 3306:3306
-  --mount "type=bind,src=$PWD/arpanet.sql,dst=/docker-entrypoint-initdb.d/arpanet.sql"
-  --env MYSQL_ROOT_PASSWORD=password
-  --env MYSQL_DATABASE=arpanet
+docker run \
+  --rm -it -p 3306:3306 \
+  --mount "type=bind,src=$PWD/arpanet.sql,dst=/docker-entrypoint-initdb.d/arpanet.sql" \
+  --env MYSQL_ROOT_PASSWORD=password \
+  --env MYSQL_DATABASE=arpanet \
   mysql
 ```
 

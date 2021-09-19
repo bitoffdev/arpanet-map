@@ -60,6 +60,15 @@ jobs:
           yarn buildMaps &&
           cp public/mapsManifest.json public/*.geo.json build
 
+      - name: Setup Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Build Documentation
+        run: |
+          pip install -r build-support/requirements.txt
+          sphinx-build -b html docs build/docs
 
       - name: Create a new commit to gh-pages
         run: |
