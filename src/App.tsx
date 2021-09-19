@@ -16,6 +16,8 @@ import Network from "./MapContents";
 import { GatewayType, ManifestMapType } from "arpanet-map";
 import GitHubRibbon from "./GitHubRibbon";
 
+import { MatomoProvider, createInstance } from "@datapunt/matomo-tracker-react";
+
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -182,4 +184,15 @@ function App() {
   );
 }
 
-export default App;
+const instance = createInstance({
+  urlBase: "https://bitoffdev.matomo.cloud/",
+  siteId: 2,
+});
+
+const MatomaApp = () => (
+  <MatomoProvider value={instance}>
+    <App />
+  </MatomoProvider>
+);
+
+export default MatomaApp;
