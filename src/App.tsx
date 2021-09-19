@@ -16,7 +16,11 @@ import Network from "./MapContents";
 import { GatewayType, ManifestMapType } from "arpanet-map";
 import GitHubRibbon from "./GitHubRibbon";
 
-import { MatomoProvider, createInstance } from "@datapunt/matomo-tracker-react";
+import {
+  MatomoProvider,
+  createInstance,
+  useMatomo,
+} from "@datapunt/matomo-tracker-react";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -98,6 +102,7 @@ function App() {
   const [manifest, setManifest] = useState<{
     snapshots: Array<ManifestMapType>;
   } | null>(null);
+  const { trackPageView } = useMatomo();
 
   const loadManifest = () =>
     fetch("mapsManifest.json")
@@ -113,6 +118,13 @@ function App() {
 
     loadManifest();
   }, [manifest]);
+
+  // Track page view with Matomo
+  useEffect(() => {
+    trackPageView({
+      documentTitle: "Arpanet Map",
+    });
+  }, [trackPageView]);
 
   const nextActiveMap = (steps: number) =>
     setActiveKey((activeKey) => {
