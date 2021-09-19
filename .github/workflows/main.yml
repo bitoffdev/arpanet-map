@@ -72,6 +72,12 @@ jobs:
 
       - name: Create a new commit to gh-pages
         run: |
+          # Tell GitHub pages not to use Jekyll.
+          #
+          # Without creating the `.nojekyll` file, GitHub Pages will treat some
+          # paths differently. For example, directories starting with an
+          # underscore will not be served.
+          touch build/.nojekyll
           git add --force build
           git -c user.name="GitHub Actions" -c user.email="actions@github.com" commit -m "Apply automatic changes" --author="${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
           git subtree split --prefix build -b gh-pages
