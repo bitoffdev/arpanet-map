@@ -18,6 +18,16 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      /* Force the URL path to match the 'homepage' defined in package.json.
+       *
+       * Without this redirect, the app may use incorrect relative URLs for
+       * loading resources.
+       */
+      if (window.location.pathname != "/arpanet-map/") {
+        window.location.pathname = "/arpanet-map/";
+      }
+    </script>
     <div id="root"></div>
   </body>
 </html>
