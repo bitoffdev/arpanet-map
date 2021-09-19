@@ -41,18 +41,18 @@ Install the node.js dependencies via yarn:
 yarn install
 ```
 
+### Build JavaScript App
+
+```bash
+yarn build
+```
+
 ### Build static GeoJSON files.
 
 Build the GeoJSON files using the data we previously loaded into MySQL
 
 ```bash
-yarn buildMaps
-```
-
-### Build JavaScript App
-
-```bash
-yarn build
+yarn buildMaps --dest build
 ```
 
 ### [Optional] Build Documentation

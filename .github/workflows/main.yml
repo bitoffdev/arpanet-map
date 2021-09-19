@@ -57,8 +57,7 @@ jobs:
 
       - name: Build geoJSON Maps
         run: |
-          yarn buildMaps &&
-          cp public/mapsManifest.json public/*.geo.json build
+          yarn buildMaps --dest build
 
       - name: Setup Python environment
         uses: actions/setup-python@v2

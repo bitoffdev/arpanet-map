@@ -7,7 +7,7 @@ Notes:
  */
 
 const fs = require("fs");
-const util = require("util");
+var parseArgs = require("minimist");
 
 var model = require("./model");
 
@@ -16,9 +16,7 @@ var model = require("./model");
  */
 const BG_URL = "src/background.geo.json";
 
-const OUTPUT_DIR = "public";
-
-const buildGeoJson = async (mapVersion) => {
+const buildGeoJson = async (mapVersion, output_dir) => {
   const mapVersionId = mapVersion.dataValues.id;
 
   // make a copy of geoJson to alter
@@ -93,7 +91,7 @@ const buildGeoJson = async (mapVersion) => {
     .toISOString()
     .substring(0, 7);
   const fileName = `${partialDateString}.geo.json`;
-  fs.writeFileSync(`${OUTPUT_DIR}/${fileName}`, JSON.stringify(geoJson));
+  fs.writeFileSync(`${output_dir}/${fileName}`, JSON.stringify(geoJson));
 
   return {
     fileName,
@@ -101,23 +99,47 @@ const buildGeoJson = async (mapVersion) => {
   };
 };
 
-const build = async () => {
+const build = async (output_dir) => {
   const mapVersions = await model.Version.findAll({
     attributes: ["id", "date"],
   });
 
-  if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR);
+  if (!fs.existsSync(output_dir)) {
+    fs.mkdirSync(output_dir);
   }
 
   // write geo json files
-  Promise.all(mapVersions.map(buildGeoJson)).then((snapshots) => {
+  Promise.all(
+    mapVersions.map((mapVersion) => buildGeoJson(mapVersion, output_dir))
+  ).then((snapshots) => {
     // write a manifest json file
     fs.writeFileSync(
-      `${OUTPUT_DIR}/mapsManifest.json`,
+      `${output_dir}/mapsManifest.json`,
       JSON.stringify({ snapshots })
     );
   });
 };
 
-model.sequelize.sync().then(build);
+const main = () => {
+  const argv = parseArgs(process.argv.slice(2));
+
+  if (argv.h || argv.help) {
+    console.log(`
+Build GeoJSON Maps
+
+This script pulls data out of the database (MySQL) and generates GeoJSON files.
+
+Usage:
+    node ./src/build.js [-h] [--help] [--dest BUILD_DIR]
+`);
+
+    return;
+  }
+
+  const output_dir = argv.dest || "public";
+  console.log(`Using Output Directory: ${output_dir}`);
+
+  model.sequelize.sync().then(() => build(output_dir));
+};
+
+main();

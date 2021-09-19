@@ -13,6 +13,7 @@
     "fontsource-overpass": "^3.1.5",
     "leaflet": "^1.7.1",
     "leaflet-tooltip-layout": "^0.1.2",
+    "minimist": "^1.2.5",
     "mysql2": "^2.2.5",
     "prettier": "^2.2.1",
     "rc-tabs": "^11.7.2",

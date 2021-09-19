@@ -80,10 +80,6 @@ var InternetEdge = sequelize.define("internet_edge", {
   },
 });
 
-sequelize.sync().then(function () {
-  console.log("done");
-});
-
 exports.sequelize = sequelize;
 exports.InternetEdge = InternetEdge;
 exports.Version = Version;
