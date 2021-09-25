@@ -10,15 +10,15 @@ Schema
 
 .. sqltable:: Schema: gateway_variant
 
-   describe gateway
+   describe gateway_variant
 
 .. sqltable:: Schema: internet_edge
 
-   describe gateway
+   describe internet_edge
 
 .. sqltable:: Schema: version
 
-   describe gateway
+   describe version
 
 Example Data
 ------------
