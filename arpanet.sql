@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.19, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: arpanet
+-- Host: localhost    Database: arpanet
 -- ------------------------------------------------------
 -- Server version	8.0.18
 
@@ -14,6 +14,38 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `arpanet`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `arpanet` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+USE `arpanet`;
+
+--
+-- Table structure for table `computer_model`
+--
+
+DROP TABLE IF EXISTS `computer_model`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `computer_model` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `computer_model`
+--
+
+LOCK TABLES `computer_model` WRITE;
+/*!40000 ALTER TABLE `computer_model` DISABLE KEYS */;
+INSERT INTO `computer_model` VALUES (1,'DDP-516'),(2,'H-645'),(3,'IBM-360/44'),(4,'IBM-360/65'),(5,'IBM-360/67'),(6,'IBM-360/75'),(7,'IBM-360/91'),(8,'IBM-370/15'),(9,'IBM-370/155'),(10,'ILLIAC (B6500)'),(11,'ILLIAC (PDP-10)'),(12,'PDP-1'),(13,'PDP-10'),(14,'PDP-11'),(15,'SIGMA-7'),(16,'TIP'),(17,'TSP'),(18,'TX-2');
+/*!40000 ALTER TABLE `computer_model` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `gateway`
@@ -106,6 +138,67 @@ INSERT INTO `internet_edge` VALUES (1,1,2,1),(2,2,3,1),(3,1,3,1),(4,1,4,1),(5,1,
 UNLOCK TABLES;
 
 --
+-- Table structure for table `person`
+--
+
+DROP TABLE IF EXISTS `person`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `person` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(255) DEFAULT NULL,
+  `nickname` varchar(255) DEFAULT NULL,
+  `wikidata_id` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `person`
+--
+
+LOCK TABLES `person` WRITE;
+/*!40000 ALTER TABLE `person` DISABLE KEYS */;
+INSERT INTO `person` VALUES (1,'Alex McKenzie','Alex McKenzie',NULL),(2,'Andy Moorer','Andy Moorer',NULL),(3,'Barry Wessler','Barry Wessler',NULL),(4,'Robert T. Braden','Bob Braden','Q4931909'),(5,'Bob Bressler','Bob Bressler',NULL),(6,NULL,'Bob Long',NULL),(7,'Robert L. Sundberg','Bob Sundberg',NULL),(8,NULL,'Charles Rose',NULL),(9,'Daniel L. Murphy','Dan Murphy','Q528318'),(10,NULL,'Eric Harslem',NULL),(11,'Hal Van Zoeren','Hal VanZoeren',NULL),(12,'James M. Pepin','Jim Pepin',NULL),(13,NULL,'Jeff Rubin',NULL),(14,NULL,'Jim White',NULL),(15,NULL,'Joel Winett',NULL),(16,NULL,'John Cravits',NULL),(17,NULL,'John McConnell',NULL),(18,'Jonathan Bruce Postel','Jon Postel','Q92623'),(19,NULL,'Len Chaiten',NULL),(20,'Michael A. Padlipsky','Mike Padlipsky','Q6828087'),(21,NULL,'Robert Rosenthal',NULL),(22,NULL,'Ron Stoughton',NULL),(23,'Thomas J. Barkelow','Tom Barkelow',NULL),(24,'Wayne Hathaway','Wayne Hathaway',NULL),(25,NULL,'Will Kantrowitz',NULL);
+/*!40000 ALTER TABLE `person` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `status_report`
+--
+
+DROP TABLE IF EXISTS `status_report`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `status_report` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `address` int(11) DEFAULT NULL,
+  `gateway` int(11) DEFAULT NULL,
+  `computer_model` int(11) DEFAULT NULL,
+  `status_or_prediction` varchar(255) DEFAULT NULL,
+  `obtained_from` int(11) DEFAULT NULL,
+  `rfc` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `gateway` (`gateway`),
+  KEY `computer_model` (`computer_model`),
+  KEY `obtained_from` (`obtained_from`),
+  CONSTRAINT `status_report_ibfk_1` FOREIGN KEY (`gateway`) REFERENCES `gateway` (`id`),
+  CONSTRAINT `status_report_ibfk_2` FOREIGN KEY (`computer_model`) REFERENCES `computer_model` (`id`),
+  CONSTRAINT `status_report_ibfk_3` FOREIGN KEY (`obtained_from`) REFERENCES `person` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=271 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `status_report`
+--
+
+LOCK TABLES `status_report` WRITE;
+/*!40000 ALTER TABLE `status_report` DISABLE KEYS */;
+INSERT INTO `status_report` VALUES (1,1,3,15,'Server #Limited',18,344),(2,65,3,7,'NETRJS now (Telnet in June)',4,344),(3,2,1,13,'Server',14,344),(4,66,1,13,'Server',19,344),(5,3,2,6,'Server',20,344),(6,4,4,13,'Server',3,344),(7,5,8,1,'Never',1,344),(8,69,8,13,'Server',9,344),(9,133,8,13,'Server(Exper.)',9,344),(10,6,7,2,'Server',20,344),(11,70,7,13,'Server',5,344),(12,134,7,13,'Server',13,344),(13,7,5,4,'User Only',10,344),(14,71,5,13,'Server',10,344),(15,8,6,9,'Server',6,344),(16,9,9,13,'Server',7,344),(17,73,9,12,'User Only',7,344),(18,10,11,5,'Soon',15,344),(19,74,11,18,'Server',20,344),(20,11,10,13,'Server',2,344),(21,12,15,14,'User Only',16,344),(22,13,12,13,'June',8,344),(23,14,13,13,'Server',11,344),(24,15,14,10,'Server',17,344),(25,16,14,5,'Soon',20,344),(26,144,14,16,'User Only',NULL,344),(27,145,17,16,'User Only',NULL,344),(28,19,21,14,'User Only',20,344),(29,147,21,16,'User Only',NULL,344),(30,148,24,16,'User Only',NULL,344),(31,23,19,3,'User Now',12,344),(32,151,19,16,'User Only',NULL,344),(33,152,23,16,'User Only',NULL,344),(34,158,8,16,'User Only',NULL,344),(35,1,3,15,'Server #Limited',18,353),(36,65,3,7,'NETRJS now (Telnet in June)',4,353),(37,2,1,13,'Server',14,353),(38,66,1,13,'Server',19,353),(39,3,2,6,'Server',20,353),(40,4,4,13,'Server',3,353),(41,5,8,1,'Never',1,353),(42,69,8,13,'Server',9,353),(43,133,8,13,'Server (Exper.)',9,353),(44,6,7,2,'Server',20,353),(45,70,7,13,'Server',5,353),(46,134,7,13,'Server',13,353),(47,7,5,4,'User Only',10,353),(48,71,5,13,'Server',10,353),(49,8,6,9,'Server',6,353),(50,9,9,13,'Server',7,353),(51,73,9,12,'User Only',7,353),(52,10,11,5,'Soon',15,353),(53,74,11,18,'Server',20,353),(54,11,10,13,'Server',2,353),(55,12,15,14,'User Only',16,353),(56,13,12,13,'June',8,353),(57,14,13,13,'Server',11,353),(58,15,14,10,'Server',17,353),(59,16,14,5,'Soon',20,353),(60,144,14,16,'User Only',NULL,353),(61,145,17,16,'User Only',NULL,353),(62,19,21,14,'User Only',20,353),(63,147,21,16,'User Only',NULL,353),(64,148,24,16,'User Only',NULL,353),(65,23,19,3,'User Now',12,353),(66,151,19,16,'User Only',NULL,353),(67,152,23,16,'User Only',NULL,353),(68,153,28,16,'User Only',NULL,353),(69,154,NULL,16,'User Only',NULL,353),(70,155,25,16,'User Only',NULL,353),(71,158,8,16,'User Only',NULL,353),(72,1,3,15,'Server #Limited',18,362),(73,65,3,7,'NETRJS now (Telnet in June)',4,362),(74,2,1,13,'Server',14,362),(75,66,1,13,'Server',19,362),(76,3,2,6,'Server',20,362),(77,4,4,13,'Server',3,362),(78,5,8,1,'Never',1,362),(79,69,8,13,'Server',9,362),(80,133,8,13,'Server(Exper.)',9,362),(81,6,7,2,'Server',20,362),(82,70,7,13,'Server',5,362),(83,134,7,13,'Server',13,362),(84,198,7,13,'Server',13,362),(85,7,5,4,'User Only',10,362),(86,71,5,13,'Server',10,362),(87,8,6,9,'Server',6,362),(88,9,9,13,'Server',7,362),(89,73,9,12,'User Only',7,362),(90,10,11,5,'Soon',15,362),(91,74,11,18,'Server',20,362),(92,11,10,13,'Server',2,362),(93,12,15,14,'User Only',16,362),(94,13,12,13,'June',8,362),(95,14,13,13,'Server',11,362),(96,15,14,11,'Server',17,362),(97,16,14,5,'Soon',20,362),(98,144,14,16,'User Only',NULL,362),(99,145,17,16,'User Only',NULL,362),(100,146,22,16,'User Only',NULL,362),(101,19,21,14,'User Only',20,362),(102,147,21,16,'User Only',NULL,362),(103,148,24,16,'User Only',NULL,362),(104,23,19,3,'User Now',12,362),(105,151,19,16,'User Only',NULL,362),(106,152,23,16,'User Only',NULL,362),(107,153,28,16,'User Only',NULL,362),(108,154,NULL,16,'User Only',NULL,362),(109,156,27,16,'User Only',NULL,362),(110,158,8,16,'User Only',NULL,362),(111,1,3,15,'Server #Limited',18,366),(112,65,3,7,'NETRJS now (Telnet in June)',4,366),(113,2,1,13,'Server',14,366),(114,66,1,13,'Server',19,366),(115,3,2,6,'Server',20,366),(116,4,4,13,'Server',3,366),(117,5,8,1,'Server',1,366),(118,69,8,13,'Server',9,366),(119,133,8,13,'Server (Exper.)',9,366),(120,6,7,2,'Server',20,366),(121,70,7,13,'Server',5,366),(122,134,7,13,'Server',13,366),(123,198,7,13,'Server',13,366),(124,7,5,4,'User Only',10,366),(125,71,5,13,'Server',10,366),(126,8,6,9,'Server',6,366),(127,9,9,13,'Server',7,366),(128,73,9,12,'User Only',7,366),(129,10,11,5,'Soon',15,366),(130,74,11,18,'Server',20,366),(131,138,11,17,'User Only',20,366),(132,11,10,13,'Server',2,366),(133,12,15,14,'User Only',16,366),(134,13,12,13,'July',8,366),(135,14,13,13,'Server',11,366),(136,15,14,11,'Server',17,366),(137,16,14,5,'Soon',20,366),(138,144,14,16,'User Only',NULL,366),(139,145,17,16,'User Only',NULL,366),(140,146,22,16,'User Only',NULL,366),(141,19,21,14,'User Only',20,366),(142,147,21,16,'User Only',NULL,366),(143,148,24,16,'User Only',NULL,366),(144,23,19,3,'User Now',12,366),(145,151,19,16,'User Only',NULL,366),(146,152,23,16,'User Only',NULL,366),(147,153,28,16,'User Only',NULL,366),(148,154,NULL,16,'User Only',NULL,366),(149,156,27,16,'User Only',NULL,366),(150,158,8,16,'User Only',NULL,366),(151,1,3,15,'Server #Limited',18,367),(152,65,3,7,'NETRJS now (Telnet in June)',4,367),(153,2,1,13,'Server',14,367),(154,66,1,13,'Server',19,367),(155,3,2,6,'Server',20,367),(156,4,4,13,'Server',3,367),(157,5,8,1,'Never',1,367),(158,69,8,13,'Server',9,367),(159,133,8,13,'Server (Exper.)',9,367),(160,6,7,2,'Server',20,367),(161,70,7,13,'Server',5,367),(162,134,7,13,'Server',13,367),(163,198,7,13,'Server',13,367),(164,7,5,4,'User Only',10,367),(165,71,5,13,'Server',10,367),(166,8,6,8,'Server',6,367),(167,9,9,13,'Server',7,367),(168,73,9,12,'User Only',7,367),(169,10,11,5,'Soon',15,367),(170,74,11,18,'Server',20,367),(171,138,11,17,'User Only',20,367),(172,11,10,13,'Server',2,367),(173,12,15,14,'User Only',16,367),(174,13,12,13,'July',8,367),(175,14,13,13,'Server',11,367),(176,15,14,11,'Server',17,367),(177,16,14,5,'Soon',20,367),(178,144,14,16,'User Only',NULL,367),(179,145,17,16,'User Only',NULL,367),(180,146,22,16,'User Only',NULL,367),(181,19,21,14,'User Only',20,367),(182,147,21,16,'User Only',NULL,367),(183,148,24,16,'User Only',NULL,367),(184,23,19,3,'User Now',12,367),(185,151,19,16,'User Only',NULL,367),(186,152,23,16,'User Only',NULL,367),(187,153,28,16,'User Only',NULL,367),(188,154,NULL,16,'User Only',NULL,367),(189,156,27,16,'User Only',NULL,367),(190,158,8,16,'User Only',NULL,367),(191,1,3,15,'SERVER #Limited',18,370),(192,65,3,7,'NETRJS now (Telnet in June)',4,370),(193,2,1,13,'Server',14,370),(194,66,1,NULL,'Server',19,370),(195,3,2,6,'Server',20,370),(196,4,4,13,'Server',3,370),(197,5,8,1,'Never',1,370),(198,69,8,13,'Server',9,370),(199,133,8,13,'Server (Exper.)',9,370),(200,6,7,2,'Server',20,370),(201,70,7,13,'Server',5,370),(202,134,7,13,'Server',13,370),(203,198,7,13,'Server',13,370),(204,7,5,4,'User Only',10,370),(205,71,5,13,'Server',10,370),(206,8,6,9,'Server',6,370),(207,9,9,13,'Server',7,370),(208,73,9,12,'User Only',7,370),(209,10,11,5,'Soon',15,370),(210,74,11,18,'Server',20,370),(211,138,11,17,'User Only',20,370),(212,11,10,13,'Server',2,370),(213,12,15,14,'User Only',16,370),(214,13,12,13,'July',8,370),(215,14,13,13,'Server',11,370),(216,15,14,11,'Server',17,370),(217,16,14,5,'Soon',20,370),(218,144,14,16,'User Only',NULL,370),(219,145,17,16,'User Only',NULL,370),(220,146,22,16,'User Only',NULL,370),(221,19,21,14,'User Only',20,370),(222,147,21,16,'User Only',NULL,370),(223,148,24,16,'User Only',NULL,370),(224,23,19,3,'User Now',12,370),(225,151,19,16,'User Only',NULL,370),(226,152,23,16,'User Only',NULL,370),(227,153,28,16,'User Only',NULL,370),(228,154,NULL,16,'User Only',NULL,370),(229,156,27,16,'User Only',NULL,370),(230,158,8,16,'User Only',NULL,370),(231,1,3,15,'Sever #Limited',18,376),(232,65,3,7,'NETRJS now (Telnet in June)',4,376),(233,2,1,13,'Server',14,376),(234,66,1,13,'Server',19,376),(235,3,2,6,'Server',20,376),(236,4,4,13,'Server',3,376),(237,5,8,1,'Never',1,376),(238,69,8,13,'Server',9,376),(239,133,8,13,'Server(Exper.)',9,376),(240,6,7,2,'Server',20,376),(241,70,7,13,'Server',5,376),(242,134,7,13,'Server',13,376),(243,198,7,13,'Server',13,376),(244,7,5,4,'User Only',10,376),(245,71,5,13,'Server',10,376),(246,8,6,9,'Server',6,376),(247,9,9,13,'Server',7,376),(248,73,9,12,'User Only',7,376),(249,10,11,5,'Soon',15,376),(250,74,11,18,'Server',20,376),(251,138,11,17,'User Only',20,376),(252,11,10,13,'Server',2,376),(253,12,15,14,'User Only',16,376),(254,13,12,13,'July',8,376),(255,14,13,13,'Server',11,376),(256,15,14,11,'Server',17,376),(257,16,14,5,'Soon',20,376),(258,144,14,16,'User Only',NULL,376),(259,145,17,16,'User Only',NULL,376),(260,146,22,16,'User Only',NULL,376),(261,19,21,14,'User Only',20,376),(262,147,21,16,'User Only',NULL,376),(263,148,24,16,'User Only',NULL,376),(264,23,19,3,'User Now',12,376),(265,151,19,16,'User Only',NULL,376),(266,152,23,16,'User Only',NULL,376),(267,153,28,16,'User Only',NULL,376),(268,154,NULL,16,'User Only',NULL,376),(269,156,27,16,'User Only',NULL,376),(270,158,8,16,'User Only',NULL,376);
+/*!40000 ALTER TABLE `status_report` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `version`
 --
 
@@ -138,4 +231,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-23  2:07:29
+-- Dump completed on 2021-10-05  0:41:27
