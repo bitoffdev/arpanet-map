@@ -146,7 +146,8 @@ function App() {
       sidebar={focusedGateway && <GatewayDetail gateway={focusedGateway} />}
       open={isSidebarOpen}
       onSetOpen={setIsSidebarOpen}
-      styles={{ sidebar: { background: "white" } }}
+      /* The sidebar's z-index must be in front of Leaflet. Leaflet's `leaflet-tooltip-pane` class has a z-index of 650. */
+      styles={{ sidebar: { background: "white", zIndex: "1000" } }}
       pullRight={true}
     >
       <GitHubRibbon />
