@@ -1,0 +1,28 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "format": "yarn run prettier --write src",
+    "premakeStatic": "yarn build",
+    "makeStatic": "node ./dist/gen",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "minimist": "^1.2.5",
+    "mysql2": "^2.3.0",
+    "prettier": "^2.4.1",
+    "sequelize": "^6.6.5",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/sequelize": "^4.28.10"
+  }
+}

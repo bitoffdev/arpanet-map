@@ -105,7 +105,7 @@ function App() {
   const { trackPageView } = useMatomo();
 
   const loadManifest = () =>
-    fetch("mapsManifest.json")
+    fetch("api/v1/map/mapsManifest.json")
       .then((result) => result.json())
       .then((manifestJson) => {
         setManifest(manifestJson);
@@ -146,8 +146,8 @@ function App() {
       sidebar={focusedGateway && <GatewayDetail gateway={focusedGateway} />}
       open={isSidebarOpen}
       onSetOpen={setIsSidebarOpen}
-      /* The sidebar's z-index must be in front of Leaflet. Leaflet's `leaflet-tooltip-pane` class has a z-index of 650. */
-      styles={{ sidebar: { background: "white", zIndex: "1000" } }}
+      /* The sidebar's z-index must be in front of Leaflet. Leaflet's `leaflet-tooltip-pane` class has a z-index of 650 and `leaflet-bottom` has a z-index of 1000. */
+      styles={{ sidebar: { background: "white", zIndex: "1200" } }}
       pullRight={true}
     >
       <GitHubRibbon />

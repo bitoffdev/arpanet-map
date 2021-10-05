@@ -6,5 +6,9 @@ declare module "arpanet-map" {
     wikidataId?: string;
   };
 
-  export type ManifestMapType = { fileName: string; partialDateString: string };
+  export type ManifestMapType = {
+    versionId: number;
+    fileName: string;
+    partialDateString: string;
+  };
 }

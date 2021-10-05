@@ -45,7 +45,7 @@ export default function MapContents({
     // clear all the existing markers from leaflet-tooltip-layout to avoid getting an error
     getMarkers().length = 0;
     // load the geoJSON data
-    fetch(key)
+    fetch(`api/v1/map/${key}`)
       .then((result) => result.json())
       .then((json) => setData(json));
   };

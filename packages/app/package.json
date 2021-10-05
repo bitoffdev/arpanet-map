@@ -14,8 +14,7 @@
     "leaflet": "^1.7.1",
     "leaflet-tooltip-layout": "^0.1.2",
     "minimist": "^1.2.5",
-    "mysql2": "^2.2.5",
-    "prettier": "^2.2.1",
+    "prettier": "^2.4.1",
     "rc-tabs": "^11.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -30,7 +29,8 @@
   },
   "scripts": {
     "format": "./node_modules/.bin/prettier --write src",
-    "buildMaps": "node ./src/build.js",
+    "buildMaps": "node ./bin/buildMaps.js",
+    "syncSchema": "node ./bin/syncSchema.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
