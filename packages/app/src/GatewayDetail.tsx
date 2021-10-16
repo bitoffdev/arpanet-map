@@ -65,11 +65,6 @@ const StatusReportRow = ({ statusReport }: { statusReport: any }) => {
 export default function GatewayDetail({ gateway }: GatewayDetailProps) {
   const [wikipediaUrl, setWikipediaUrl] = useState<string | null>(null);
   const [statusReports, setStatusReports] = useState<Array<any>>([]);
-  // const [computers, setComputers] = useState<Array<string>>([]);
-
-  // const getComputers = (versionId, gatewayId) => {
-
-  // };
 
   useEffect(() => {
     setWikipediaUrl(null);
@@ -88,14 +83,10 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
       .then((response) => response.json())
       .then(wdk.parse.wd.entities)
       .then((entities) => {
-        console.log(entities);
         const e = entities[wikidataId];
         const wikipediaUrl = `https://en.wikipedia.org/wiki/${e.sitelinks.enwiki}`;
-        console.log(wikipediaUrl);
         setWikipediaUrl(wikipediaUrl);
       });
-
-    console.log(gatewayId);
 
     fetch("api/v1/statusReports.json")
       .then((response) => response.json())
@@ -106,8 +97,6 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
       })
       .then(setStatusReports);
   }, [gateway]);
-
-  // statusReports.forEach(async r => console.log(await getPerson(r.obtained_from)));
 
   return (
     <StyledGatewayDetailDiv>
