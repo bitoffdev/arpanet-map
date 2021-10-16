@@ -143,7 +143,14 @@ function App() {
 
   return (
     <Sidebar
-      sidebar={focusedGateway && <GatewayDetail gateway={focusedGateway} />}
+      // sidebar is required by PropTypes, so use an empty div if necessary
+      sidebar={
+        focusedGateway ? (
+          <GatewayDetail gateway={focusedGateway} />
+        ) : (
+          <div></div>
+        )
+      }
       open={isSidebarOpen}
       onSetOpen={setIsSidebarOpen}
       /* The sidebar's z-index must be in front of Leaflet. Leaflet's `leaflet-tooltip-pane` class has a z-index of 650 and `leaflet-bottom` has a z-index of 1000. */
