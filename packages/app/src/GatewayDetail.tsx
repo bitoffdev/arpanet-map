@@ -26,6 +26,7 @@ const StyledTable = styled.table`
 const StyledGatewayDetailDiv = styled.div`
   font-family: "Overpass";
   min-width: 300px;
+  max-width: 700px;
   padding: 20px;
 `;
 
