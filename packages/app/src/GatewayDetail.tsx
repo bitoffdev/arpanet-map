@@ -129,7 +129,10 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
         </thead>
         <tbody>
           {statusReports.map((statusReport) => (
-            <StatusReportRow statusReport={statusReport}></StatusReportRow>
+            <StatusReportRow
+              statusReport={statusReport}
+              key={statusReport.id}
+            ></StatusReportRow>
           ))}
         </tbody>
       </StyledTable>
