@@ -1,7 +1,7 @@
 # Arpanet Map
 
 Interactive web app for visualizing the structure of the Advanced Research
-Projects Agency Network (ARPANet) circa the 1960s.
+Projects Agency Network (ARPANet) circa the 1970s.
 
 ![](docs/screenshot.png)
 
