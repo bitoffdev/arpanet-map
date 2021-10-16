@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import WBK from "wikibase-sdk";
 import { GatewayType } from "arpanet-map";
 import { getComputerModel, getPerson } from "./Data";
+import { InfoTooltip } from "./InfoTooltip";
 
 // const WBK = require('wikibase-sdk');
 const wdk = WBK({
@@ -108,7 +109,10 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
           <a href={wikipediaUrl}>Wikipedia</a>
         </p>
       )}
-      <h2>Status Reports</h2>
+      <h2>
+        <span style={{ marginRight: "10px" }}>Status Reports</span>
+        <InfoTooltip message="Between September 1971 (RFC 235) and August 1972 (RFC 376), BBN issued status reports as RFCs approximately every two weeks. These reports detail information about the network status of hosts connected to ARPANET." />
+      </h2>
       {statusReports.length === 0 ? (
         <p>No status reports were found for this gateway.</p>
       ) : (
