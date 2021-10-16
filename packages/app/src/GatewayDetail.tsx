@@ -73,6 +73,7 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
 
   useEffect(() => {
     setWikipediaUrl(null);
+    setStatusReports(() => []);
 
     // it seems like we need to unpack wikidataId for typescript to acknowledge the nullish check
     const { gatewayId, wikidataId } = gateway;
@@ -119,24 +120,28 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
         </p>
       )}
       <h2>Status Reports</h2>
-      <StyledTable>
-        <thead>
-          <tr>
-            <th>Address</th>
-            <th>Model</th>
-            <th>Obtained From</th>
-            <th>RFC</th>
-          </tr>
-        </thead>
-        <tbody>
-          {statusReports.map((statusReport) => (
-            <StatusReportRow
-              statusReport={statusReport}
-              key={statusReport.id}
-            ></StatusReportRow>
-          ))}
-        </tbody>
-      </StyledTable>
+      {statusReports.length === 0 ? (
+        <p>No status reports were found for this gateway.</p>
+      ) : (
+        <StyledTable>
+          <thead>
+            <tr>
+              <th>Address</th>
+              <th>Model</th>
+              <th>Obtained From</th>
+              <th>RFC</th>
+            </tr>
+          </thead>
+          <tbody>
+            {statusReports.map((statusReport) => (
+              <StatusReportRow
+                statusReport={statusReport}
+                key={statusReport.id}
+              ></StatusReportRow>
+            ))}
+          </tbody>
+        </StyledTable>
+      )}
     </StyledGatewayDetailDiv>
   );
 }
