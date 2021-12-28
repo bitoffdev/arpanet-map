@@ -73,21 +73,21 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
 
     // it seems like we need to unpack wikidataId for typescript to acknowledge the nullish check
     const { gatewayId, wikidataId } = gateway;
-    if (wikidataId == null) return;
-
-    const url = wdk.getEntities({
-      ids: [gateway.wikidataId],
-      languages: ["en"],
-    });
-
-    fetch(url)
-      .then((response) => response.json())
-      .then(wdk.parse.wd.entities)
-      .then((entities) => {
-        const e = entities[wikidataId];
-        const wikipediaUrl = `https://en.wikipedia.org/wiki/${e.sitelinks.enwiki}`;
-        setWikipediaUrl(wikipediaUrl);
+    if (wikidataId != null) {
+      const url = wdk.getEntities({
+        ids: [gateway.wikidataId],
+        languages: ["en"],
       });
+
+      fetch(url)
+        .then((response) => response.json())
+        .then(wdk.parse.wd.entities)
+        .then((entities) => {
+          const e = entities[wikidataId];
+          const wikipediaUrl = `https://en.wikipedia.org/wiki/${e.sitelinks.enwiki}`;
+          setWikipediaUrl(wikipediaUrl);
+        });
+    }
 
     fetch("api/v1/statusReports.json")
       .then((response) => response.json())
