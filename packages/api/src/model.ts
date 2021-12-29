@@ -1,8 +1,8 @@
 import { Sequelize, Model, DataTypes, Optional } from "sequelize";
 
-const CONNECTION_URL = "mysql://root:password@localhost:3306/arpanet";
-
-export const sequelize = new Sequelize(CONNECTION_URL, {
+export const sequelize = new Sequelize({
+  dialect: "sqlite",
+  storage: "db.sqlite3",
   define: {
     // disable the default createdAt and updatedAt columns
     timestamps: false,
@@ -203,7 +203,13 @@ export const Person = sequelize.define<PersonInstance>("person", {
   },
   full_name: DataTypes.STRING,
   nickname: DataTypes.STRING,
-  wikidata_id: DataTypes.STRING,
+  // allowNull and defaultValue are required so that NULLs read from the
+  // database will be represented by null in JavaScript
+  wikidata_id: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    defaultValue: null,
+  },
 });
 
 interface StatusReportAttributes {
