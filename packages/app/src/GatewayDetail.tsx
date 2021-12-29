@@ -4,6 +4,7 @@ import WBK from "wikibase-sdk";
 import { GatewayType } from "arpanet-map";
 import { getComputerModel, getPerson } from "./Data";
 import { InfoTooltip } from "./InfoTooltip";
+import WikipediaAnchor from "./WikipediaAnchor";
 
 // const WBK = require('wikibase-sdk');
 const wdk = WBK({
@@ -49,7 +50,13 @@ const StatusReportRow = ({ statusReport }: { statusReport: any }) => {
     <tr>
       <td>{statusReport.address}</td>
       <td>{computerModel && computerModel.name}</td>
-      <td>{person && person.nickname}</td>
+      <td>
+        {person && (
+          <WikipediaAnchor wikidataId={person.wikidataId}>
+            {person.nickname}
+          </WikipediaAnchor>
+        )}
+      </td>
       <td>
         <a
           rel="noreferrer"
