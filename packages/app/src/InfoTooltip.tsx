@@ -76,7 +76,11 @@ export const InfoTooltip = ({ message }: { message: string }) => {
         <StyledTrigger />
       </span>
 
-      <div ref={setPopperElement} style={styles.popper} {...attributes.popper}>
+      <div
+        ref={setPopperElement}
+        style={{ ...styles.popper, pointerEvents: "none" }}
+        {...attributes.popper}
+      >
         <StyledTooltip role="tooltip" visible={visible}>
           {message}
         </StyledTooltip>
