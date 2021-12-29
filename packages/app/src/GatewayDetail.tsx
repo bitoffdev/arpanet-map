@@ -1,16 +1,9 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import WBK from "wikibase-sdk";
 import { GatewayType } from "arpanet-map";
 import { getComputerModel, getPerson } from "./Data";
 import { InfoTooltip } from "./InfoTooltip";
 import WikipediaAnchor from "./WikipediaAnchor";
-
-// const WBK = require('wikibase-sdk');
-const wdk = WBK({
-  instance: "https://www.wikidata.org",
-  sparqlEndpoint: "https://query.wikidata.org/sparql",
-});
 
 const StyledTable = styled.table`
   table,
@@ -71,31 +64,12 @@ const StatusReportRow = ({ statusReport }: { statusReport: any }) => {
 };
 
 export default function GatewayDetail({ gateway }: GatewayDetailProps) {
-  const [wikipediaUrl, setWikipediaUrl] = useState<string | null>(null);
   const [statusReports, setStatusReports] = useState<Array<any>>([]);
 
   useEffect(() => {
-    setWikipediaUrl(null);
     setStatusReports(() => []);
 
-    // it seems like we need to unpack wikidataId for typescript to acknowledge the nullish check
-    const { gatewayId, wikidataId } = gateway;
-    if (wikidataId != null) {
-      const url = wdk.getEntities({
-        ids: [gateway.wikidataId],
-        languages: ["en"],
-      });
-
-      fetch(url)
-        .then((response) => response.json())
-        .then(wdk.parse.wd.entities)
-        .then((entities) => {
-          const e = entities[wikidataId];
-          const wikipediaUrl = `https://en.wikipedia.org/wiki/${e.sitelinks.enwiki}`;
-          setWikipediaUrl(wikipediaUrl);
-        });
-    }
-
+    const { gatewayId } = gateway;
     fetch("api/v1/statusReports.json")
       .then((response) => response.json())
       .then((body) => {
@@ -111,10 +85,10 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
       <h1>{gateway.name}</h1>
       <h2>{gateway.longName}</h2>
       {gateway.address && <p>{gateway.address}</p>}
-      {wikipediaUrl && (
-        <p>
-          <a href={wikipediaUrl}>Wikipedia</a>
-        </p>
+      {gateway.wikidataId && (
+        <WikipediaAnchor wikidataId={gateway.wikidataId}>
+          Wikipedia
+        </WikipediaAnchor>
       )}
       <h2>
         <span style={{ marginRight: "10px" }}>Status Reports</span>
