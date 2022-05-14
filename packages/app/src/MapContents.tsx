@@ -1,6 +1,6 @@
 import { useMap } from "react-leaflet";
 import { useEffect, useState } from "react";
-import { getMarkers, initialize, resetMarker } from "leaflet-tooltip-layout";
+import { getMarkers, initialize, resetMarker } from "./leaflet-tooltip-layout";
 import Leaflet, { Marker, PathOptions } from "leaflet";
 import { GatewayType } from "arpanet-map";
 
