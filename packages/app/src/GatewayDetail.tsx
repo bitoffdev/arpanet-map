@@ -4,6 +4,26 @@ import { GatewayType } from "arpanet-map";
 import { getComputerModel, getPerson } from "./Data";
 import { InfoTooltip } from "./InfoTooltip";
 import WikipediaAnchor from "./WikipediaAnchor";
+import {Address, gatewayFromId, Reference} from "./model";
+
+const StyledAddressContainer = styled.div`
+background-color: #eee;
+border: 2px solid purple;
+border-radius: 10px;
+padding: 0px;
+`;
+
+const StyledAddressHeader = styled.div`
+  margin: 0px;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+`;
+
+const StyledAddressBody = styled.div`
+  margin: 0px;
+  padding: 10px;
+`;
 
 const StyledTable = styled.table`
   table,
@@ -63,8 +83,39 @@ const StatusReportRow = ({ statusReport }: { statusReport: any }) => {
   );
 };
 
+const addrToJSX = (addr: Address) => {
+  return (
+    <StyledAddressContainer>
+      <StyledAddressHeader>
+        <a href={addr.reference.url} rel="noreferrer" target="_blank" style={{textDecoration: "none", color: "white"}}>
+          Address from {addr.reference.name}
+        </a>
+      </StyledAddressHeader>
+      <StyledAddressBody>
+        <table>
+          {addr.title1 != null &&
+            <tr><td>{addr.title1}</td></tr>
+          }
+          {addr.title2 != null &&
+            <tr><td>{addr.title2}</td></tr>
+          }
+          {addr.title3 != null &&
+            <tr><td>{addr.title3}</td></tr>
+          }
+          {addr.street != null &&
+            <tr><td>{addr.street}</td></tr>
+          }
+          <tr><td>{addr.city}, {addr.state} {addr.postal_code}</td></tr>
+        </table>
+      </StyledAddressBody>
+    </StyledAddressContainer>
+  );
+}
+
 export default function GatewayDetail({ gateway }: GatewayDetailProps) {
   const [statusReports, setStatusReports] = useState<Array<any>>([]);
+
+  const gw = gatewayFromId( gateway.gatewayId );
 
   useEffect(() => {
     setStatusReports(() => []);
@@ -84,6 +135,7 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
     <StyledGatewayDetailDiv>
       <h1>{gateway.name}</h1>
       <h2>{gateway.longName}</h2>
+      {gw.addresses.map(addrToJSX)}
       {gateway.address && <p>{gateway.address}</p>}
       {gateway.wikidataId && (
         <WikipediaAnchor wikidataId={gateway.wikidataId}>
