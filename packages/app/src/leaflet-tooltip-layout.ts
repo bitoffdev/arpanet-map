@@ -6,6 +6,8 @@ let map: L.Map;
 const markerList: Array<SpecialMarker> = []; // all markers here
 const polylineList: Array<L.Polyline> = []; // all polylines here
 
+let guard = false;
+
 type PolylineCreatedCallback =
   | ((ply: L.Polyline<LineString | MultiLineString, any>) => void)
   | null;
@@ -43,46 +45,26 @@ export function initialize(
     };
   }
 
-  setRandomPos();
-  layoutByForce();
-  setEdgePosition();
-  drawLine(map);
+  layoutByForce(true);
 
   // event registrations
-  map.on("zoomstart", function () {
-    removeAllPolyline(map);
-  });
-
-  map.on("zoomend", function () {
-    setRandomPos();
-    layoutByForce();
-    setEdgePosition();
-    drawLine(map);
-  });
-
-  map.on("dragend", function () {
-    removeAllPolyline(map);
-    setRandomPos();
-    layoutByForce();
-    setEdgePosition();
-    drawLine(map);
-  });
-
-  map.on("resize", function () {
-    removeAllPolyline(map);
-    setRandomPos();
-    layoutByForce();
-    setEdgePosition();
-    drawLine(map);
-  });
+  map.on("zoomstart", () => removeAllPolyline(map));
+  map.on("zoomend", () => layoutByForce(false, 20));
+  map.on("dragend", () => layoutByForce(false, 10));
+  map.on("resize", () => layoutByForce(true, 50));
 }
 
+/**
+ * Add leaflet marker to the list of markers tracked by this tooltip layout
+ * module
+ */
 export function resetMarker(marker: L.Marker) {
   const tooltip = marker.getTooltip();
-  if (tooltip === undefined) return;
+  if (tooltip === undefined)
+    throw Error("Expected argument marker to not be undefined");
 
   const name = tooltip.getContent();
-  if (name === undefined) return;
+  if (name === undefined) throw Error("Expected tooltip to have content");
   const options = tooltip.options;
   marker.unbindTooltip();
 
@@ -93,21 +75,25 @@ export function resetMarker(marker: L.Marker) {
     permanent: true,
     interactive: true,
     direction: "left",
-    // sticky: 'none',
+    sticky: false,
     opacity: options.opacity,
   });
   markerList.push(marker as SpecialMarker);
 }
 
-export function getMarkers() {
-  return markerList;
-}
+export const getMarkers = () => markerList;
 
+/**
+ * Clear all the lines connecting leaflet marker with the tooltips that we
+ * are positioning
+ *
+ * @param map leaflet map
+ */
 function removeAllPolyline(map: L.Map) {
-  for (let i = 0; i < polylineList.length; i++) {
-    map.removeLayer(polylineList[i]);
+  while (polylineList.length > 0) {
+    const layer = polylineList.pop();
+    if (layer !== undefined) map.removeLayer(layer);
   }
-  polylineList.length = 0;
 }
 
 /**
@@ -123,28 +109,15 @@ function drawLine(map: L.Map) {
     const labelDom = label._container;
     let { x: labelX, y: labelY } = getPosition(labelDom);
 
-    labelX -= 5;
-    labelY += 2;
     if (labelX - markerX !== 0 || labelY - markerY !== 0) {
-      if (labelX + labelDom.offsetWidth < markerX) {
-        labelX += labelDom.offsetWidth;
-      }
-      if (labelY + labelDom.offsetHeight < markerY) {
-        labelY += labelDom.offsetHeight;
-      }
       const lineDest = L.point(labelX, labelY);
       const destLatLng = map.layerPointToLatLng(lineDest);
 
-      setTimeout(
-        ((marker, destLatLng) => () => {
-          let ply = L.polyline([marker.getLatLng(), destLatLng]);
-          _onPolylineCreated && _onPolylineCreated(ply);
-          marker.__ply = ply;
-          polylineList.push(ply);
-          ply.addTo(map);
-        })(marker, destLatLng),
-        0
-      );
+      const ply = L.polyline([marker.getLatLng(), destLatLng]);
+      _onPolylineCreated && _onPolylineCreated(ply);
+      marker.__ply = ply;
+      polylineList.push(ply);
+      ply.addTo(map);
     }
   }
 }
@@ -196,7 +169,8 @@ function getPosition(el: HTMLElement): L.Point {
  */
 function computePositionStep(t: number) {
   const area = (window.innerWidth * window.innerHeight) / 10;
-  const k = Math.sqrt(area / markerList.length);
+  // increase k to spread labels out
+  const k = 1.5 * Math.sqrt(area / markerList.length);
   let dpos = L.point(0, 0);
   let v_pos: L.Point;
   let v: SpecialMarker;
@@ -252,28 +226,48 @@ function computePositionStep(t: number) {
   }
 }
 
-function layoutByForce() {
+async function layoutByForce(randomize: boolean = false, times: number = 50) {
+  // weak implementation of locking -- we may occasionally run into a race
+  // condition where this breaks, but this shouldn't be a huge deal for now
+  if (guard) return;
+  guard = true;
+  console.log("layoutByForce");
+
+  if (randomize) setRandomPos();
+
   const start = Math.ceil(window.innerWidth / 10);
-  const times = 50;
   let temperature: number;
-  let i;
-  for (i = 0; i < times; i += 1) {
+  for (let i = 0; i < times; i += 1) {
     temperature = start * (1 - i / (times - 1));
     computePositionStep(temperature);
+
+    for (let marker of markerList) {
+      const leafletTooltip = marker.getTooltip() as SpecialTooltip;
+      if (leafletTooltip === undefined) continue;
+
+      let p = getPosition(leafletTooltip._container);
+      L.DomUtil.setTransform(leafletTooltip._container, p);
+    }
+
+    drawLine(map);
+
+    await new Promise((r) => setTimeout(r, 1));
   }
 
-  for (i = 0; i < markerList.length; i++) {
-    const leafletTooltip = markerList[i].getTooltip() as SpecialTooltip;
-    if (leafletTooltip === undefined) continue;
+  setEdgePosition();
+  drawLine(map);
 
-    let p = getPosition(leafletTooltip._container);
-    const { offsetWidth: width, offsetHeight: height } =
-      leafletTooltip._container;
-    p = L.point(Math.ceil(p.x - width / 2), Math.ceil(p.y - height / 2));
-    L.DomUtil.setTransform(leafletTooltip._container, p);
-  }
+  await new Promise((r) => setTimeout(r, 1));
+
+  guard = false;
 }
 
+/**
+ * constrain tooltip labels to the bounds of the Leaflet map
+ *
+ * Labels that are outside of the bounds will be shifted so that they are
+ * inside the bounds.
+ */
 function setEdgePosition() {
   const bounds = map.getBounds();
   const northWest = map.latLngToLayerPoint(bounds.getNorthWest());
