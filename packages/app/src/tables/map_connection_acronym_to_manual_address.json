@@ -1,0 +1,32 @@
+{
+  "schema": {
+    "fields": [
+      { "name": "index", "type": "integer" },
+      { "name": "find", "type": "string" },
+      { "name": "replace", "type": "string" }
+    ],
+    "primaryKey": ["index"],
+    "pandas_version": "1.4.0"
+  },
+  "data": [
+    { "index": 0, "find": "DCEX-0", "replace": "DCEX-0" },
+    { "index": 1, "find": "DOCB-TIP", "replace": "DOCB-TIP" },
+    { "index": 2, "find": "BURROUGHS", "replace": "BURROUGHS" },
+    { "index": 3, "find": "BELVOIR", "replace": "BELVOIR" },
+    { "index": 4, "find": "CASE", "replace": "CASE" },
+    { "index": 5, "find": "FNWC", "replace": "FNWC" },
+    { "index": 6, "find": "ILLINOIS", "replace": "ILLINOIS" },
+    { "index": 7, "find": "SDC", "replace": "SDC" },
+    { "index": 8, "find": "UCSB", "replace": "UCSB" },
+    { "index": 9, "find": "UCSD", "replace": "UCSD" },
+    { "index": 10, "find": "NOAA", "replace": "DOCB-TIP" },
+    { "index": 11, "find": "DOCB", "replace": "DOCB-TIP" },
+    { "index": 12, "find": "DCEX", "replace": "DCEX-0" },
+    { "index": 13, "find": "RML", "replace": "RML" },
+    { "index": 14, "find": "TINKER", "replace": "TINKER" },
+    { "index": 15, "find": "SCRL", "replace": "SCRL" },
+    { "index": 16, "find": "NUC", "replace": "NUC" },
+    { "index": 17, "find": "BROOKS", "replace": "BROOKS" },
+    { "index": 18, "find": "JOHNS", "replace": "JOHNS" }
+  ]
+}

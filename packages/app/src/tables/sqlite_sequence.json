@@ -1,0 +1,16 @@
+{
+  "schema": {
+    "fields": [
+      { "name": "index", "type": "integer" },
+      { "name": "name", "type": "string" },
+      { "name": "seq", "type": "integer" }
+    ],
+    "primaryKey": ["index"],
+    "pandas_version": "1.4.0"
+  },
+  "data": [
+    { "index": 0, "name": "person", "seq": 25 },
+    { "index": 1, "name": "computer_model", "seq": 18 },
+    { "index": 2, "name": "status_report", "seq": 196 }
+  ]
+}

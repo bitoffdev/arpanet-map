@@ -36,6 +36,7 @@ const main = () => {
     .then(async () => person.build(output_dir))
     .then(async () => statusReport.build(output_dir))
     .then(() => console.log("Done."))
+    .then(() => console.log(`Output written to directory ${output_dir}`))
     .then(() => process.exit(0));
 };
 

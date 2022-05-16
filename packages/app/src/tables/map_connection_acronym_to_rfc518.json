@@ -1,0 +1,51 @@
+{
+  "schema": {
+    "fields": [
+      { "name": "index", "type": "integer" },
+      { "name": "find", "type": "string" },
+      { "name": "replace", "type": "string" }
+    ],
+    "primaryKey": ["index"],
+    "pandas_version": "1.4.0"
+  },
+  "data": [
+    { "index": 0, "find": "AMES-67", "replace": "AMES-67" },
+    { "index": 1, "find": "BBN-TNEX", "replace": "BBN-TNEX" },
+    { "index": 2, "find": "BBN-TENEXB", "replace": "BBN-TENEXB" },
+    { "index": 3, "find": "CASE-10", "replace": "CASE-10" },
+    { "index": 4, "find": "CMU-10A", "replace": "CMU-10A" },
+    { "index": 5, "find": "CMU-10B", "replace": "CMU-10B" },
+    { "index": 6, "find": "CCA", "replace": "CCA" },
+    {
+      "index": 7,
+      "find": "CULLER-HARRISON CO.",
+      "replace": "CULLER-HARRISON CO."
+    },
+    { "index": 8, "find": "HARV-10", "replace": "HARV-10" },
+    { "index": 9, "find": "ILLIAC", "replace": "ILLIAC" },
+    { "index": 10, "find": "LL-67", "replace": "LL-67" },
+    { "index": 11, "find": "LL-TX2", "replace": "LL-TX2" },
+    { "index": 12, "find": "MIT-AI", "replace": "MIT-AI" },
+    { "index": 13, "find": "MIT-DMCG", "replace": "MIT-DMCG" },
+    { "index": 14, "find": "MIT-ML", "replace": "MIT-ML" },
+    { "index": 15, "find": "MIT-MULTICS", "replace": "MIT-MULTICS" },
+    { "index": 16, "find": "SDC-ADEPT", "replace": "SDC-ADEPT" },
+    { "index": 17, "find": "SCRL", "replace": "SCRL" },
+    { "index": 18, "find": "SRI-AI", "replace": "SRI-AI" },
+    { "index": 19, "find": "SRI-ARC", "replace": "SRI-ARC" },
+    { "index": 20, "find": "SU-AI", "replace": "SU-AI" },
+    { "index": 21, "find": "UCLA-CCN", "replace": "UCLA-CCN" },
+    { "index": 22, "find": "UCLA-NMC", "replace": "UCLA-NMC" },
+    { "index": 23, "find": "UCSB-MOD75", "replace": "UCSB-MOD75" },
+    { "index": 24, "find": "UCSD-CC", "replace": "UCSD-CC" },
+    { "index": 25, "find": "USC-ISI", "replace": "USC-ISI" },
+    { "index": 26, "find": "UTAH-10", "replace": "UTAH-10" },
+    { "index": 27, "find": "UTAH", "replace": "UTAH-10" },
+    { "index": 28, "find": "LINCOLN", "replace": "LL-TX2" },
+    { "index": 29, "find": "STANFORD", "replace": "SRI-AI" },
+    { "index": 30, "find": "HARVARD", "replace": "HARV-10" },
+    { "index": 31, "find": "AMES", "replace": "AMES-67" },
+    { "index": 32, "find": "CASE", "replace": "CASE-10" },
+    { "index": 33, "find": "SDC", "replace": "SDC-ADEPT" }
+  ]
+}

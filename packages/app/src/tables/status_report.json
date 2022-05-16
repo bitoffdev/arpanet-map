@@ -1,0 +1,1978 @@
+{
+  "schema": {
+    "fields": [
+      { "name": "index", "type": "integer" },
+      { "name": "id", "type": "integer" },
+      { "name": "address", "type": "integer" },
+      { "name": "gateway", "type": "integer" },
+      { "name": "computer_model", "type": "integer" },
+      { "name": "status_or_prediction", "type": "string" },
+      { "name": "obtained_from", "type": "number" },
+      { "name": "rfc", "type": "integer" }
+    ],
+    "primaryKey": ["index"],
+    "pandas_version": "1.4.0"
+  },
+  "data": [
+    {
+      "index": 0,
+      "id": 1,
+      "address": 1,
+      "gateway": 107,
+      "computer_model": 15,
+      "status_or_prediction": "Server #Limited",
+      "obtained_from": 18.0,
+      "rfc": 344
+    },
+    {
+      "index": 1,
+      "id": 2,
+      "address": 65,
+      "gateway": 107,
+      "computer_model": 7,
+      "status_or_prediction": "NETRJS now (Telnet in June)",
+      "obtained_from": 4.0,
+      "rfc": 344
+    },
+    {
+      "index": 2,
+      "id": 3,
+      "address": 3,
+      "gateway": 108,
+      "computer_model": 6,
+      "status_or_prediction": "Server",
+      "obtained_from": 22.0,
+      "rfc": 344
+    },
+    {
+      "index": 3,
+      "id": 4,
+      "address": 4,
+      "gateway": 117,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 3.0,
+      "rfc": 344
+    },
+    {
+      "index": 4,
+      "id": 5,
+      "address": 7,
+      "gateway": 82,
+      "computer_model": 4,
+      "status_or_prediction": "User Only",
+      "obtained_from": 10.0,
+      "rfc": 344
+    },
+    {
+      "index": 5,
+      "id": 6,
+      "address": 71,
+      "gateway": 82,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 10.0,
+      "rfc": 344
+    },
+    {
+      "index": 6,
+      "id": 7,
+      "address": 8,
+      "gateway": 96,
+      "computer_model": 9,
+      "status_or_prediction": "Server",
+      "obtained_from": 6.0,
+      "rfc": 344
+    },
+    {
+      "index": 7,
+      "id": 8,
+      "address": 9,
+      "gateway": 43,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 7.0,
+      "rfc": 344
+    },
+    {
+      "index": 8,
+      "id": 9,
+      "address": 73,
+      "gateway": 43,
+      "computer_model": 12,
+      "status_or_prediction": "User Only",
+      "obtained_from": 7.0,
+      "rfc": 344
+    },
+    {
+      "index": 9,
+      "id": 10,
+      "address": 10,
+      "gateway": 52,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 15.0,
+      "rfc": 344
+    },
+    {
+      "index": 10,
+      "id": 11,
+      "address": 74,
+      "gateway": 52,
+      "computer_model": 18,
+      "status_or_prediction": "Server",
+      "obtained_from": 25.0,
+      "rfc": 344
+    },
+    {
+      "index": 11,
+      "id": 12,
+      "address": 11,
+      "gateway": 100,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 2.0,
+      "rfc": 344
+    },
+    {
+      "index": 12,
+      "id": 13,
+      "address": 12,
+      "gateway": 45,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 16.0,
+      "rfc": 344
+    },
+    {
+      "index": 13,
+      "id": 14,
+      "address": 13,
+      "gateway": 24,
+      "computer_model": 13,
+      "status_or_prediction": "June",
+      "obtained_from": 8.0,
+      "rfc": 344
+    },
+    {
+      "index": 14,
+      "id": 15,
+      "address": 15,
+      "gateway": 6,
+      "computer_model": 10,
+      "status_or_prediction": "Server",
+      "obtained_from": 17.0,
+      "rfc": 344
+    },
+    {
+      "index": 15,
+      "id": 16,
+      "address": 16,
+      "gateway": 6,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 24.0,
+      "rfc": 344
+    },
+    {
+      "index": 16,
+      "id": 17,
+      "address": 144,
+      "gateway": 6,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 344
+    },
+    {
+      "index": 17,
+      "id": 18,
+      "address": 145,
+      "gateway": 63,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 344
+    },
+    {
+      "index": 18,
+      "id": 19,
+      "address": 19,
+      "gateway": 65,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 21.0,
+      "rfc": 344
+    },
+    {
+      "index": 19,
+      "id": 20,
+      "address": 147,
+      "gateway": 65,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 344
+    },
+    {
+      "index": 20,
+      "id": 21,
+      "address": 148,
+      "gateway": 39,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 344
+    },
+    {
+      "index": 21,
+      "id": 22,
+      "address": 23,
+      "gateway": 111,
+      "computer_model": 3,
+      "status_or_prediction": "User Now",
+      "obtained_from": null,
+      "rfc": 344
+    },
+    {
+      "index": 22,
+      "id": 23,
+      "address": 151,
+      "gateway": 111,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 344
+    },
+    {
+      "index": 23,
+      "id": 24,
+      "address": 152,
+      "gateway": 42,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 344
+    },
+    {
+      "index": 24,
+      "id": 25,
+      "address": 158,
+      "gateway": 13,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 344
+    },
+    {
+      "index": 25,
+      "id": 26,
+      "address": 1,
+      "gateway": 107,
+      "computer_model": 15,
+      "status_or_prediction": "Server #Limited",
+      "obtained_from": 18.0,
+      "rfc": 353
+    },
+    {
+      "index": 26,
+      "id": 27,
+      "address": 65,
+      "gateway": 107,
+      "computer_model": 7,
+      "status_or_prediction": "NETRJS now (Telnet in June)",
+      "obtained_from": 4.0,
+      "rfc": 353
+    },
+    {
+      "index": 27,
+      "id": 28,
+      "address": 3,
+      "gateway": 108,
+      "computer_model": 6,
+      "status_or_prediction": "Server",
+      "obtained_from": 22.0,
+      "rfc": 353
+    },
+    {
+      "index": 28,
+      "id": 29,
+      "address": 4,
+      "gateway": 117,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 3.0,
+      "rfc": 353
+    },
+    {
+      "index": 29,
+      "id": 30,
+      "address": 7,
+      "gateway": 82,
+      "computer_model": 4,
+      "status_or_prediction": "User Only",
+      "obtained_from": 10.0,
+      "rfc": 353
+    },
+    {
+      "index": 30,
+      "id": 31,
+      "address": 71,
+      "gateway": 82,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 10.0,
+      "rfc": 353
+    },
+    {
+      "index": 31,
+      "id": 32,
+      "address": 8,
+      "gateway": 96,
+      "computer_model": 9,
+      "status_or_prediction": "Server",
+      "obtained_from": 6.0,
+      "rfc": 353
+    },
+    {
+      "index": 32,
+      "id": 33,
+      "address": 9,
+      "gateway": 43,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 7.0,
+      "rfc": 353
+    },
+    {
+      "index": 33,
+      "id": 34,
+      "address": 73,
+      "gateway": 43,
+      "computer_model": 12,
+      "status_or_prediction": "User Only",
+      "obtained_from": 7.0,
+      "rfc": 353
+    },
+    {
+      "index": 34,
+      "id": 35,
+      "address": 10,
+      "gateway": 52,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 15.0,
+      "rfc": 353
+    },
+    {
+      "index": 35,
+      "id": 36,
+      "address": 74,
+      "gateway": 52,
+      "computer_model": 18,
+      "status_or_prediction": "Server",
+      "obtained_from": 25.0,
+      "rfc": 353
+    },
+    {
+      "index": 36,
+      "id": 37,
+      "address": 11,
+      "gateway": 100,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 2.0,
+      "rfc": 353
+    },
+    {
+      "index": 37,
+      "id": 38,
+      "address": 12,
+      "gateway": 45,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 16.0,
+      "rfc": 353
+    },
+    {
+      "index": 38,
+      "id": 39,
+      "address": 13,
+      "gateway": 24,
+      "computer_model": 13,
+      "status_or_prediction": "June",
+      "obtained_from": 8.0,
+      "rfc": 353
+    },
+    {
+      "index": 39,
+      "id": 40,
+      "address": 15,
+      "gateway": 6,
+      "computer_model": 10,
+      "status_or_prediction": "Server",
+      "obtained_from": 17.0,
+      "rfc": 353
+    },
+    {
+      "index": 40,
+      "id": 41,
+      "address": 16,
+      "gateway": 6,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 24.0,
+      "rfc": 353
+    },
+    {
+      "index": 41,
+      "id": 42,
+      "address": 144,
+      "gateway": 6,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 42,
+      "id": 43,
+      "address": 145,
+      "gateway": 63,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 43,
+      "id": 44,
+      "address": 19,
+      "gateway": 65,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 21.0,
+      "rfc": 353
+    },
+    {
+      "index": 44,
+      "id": 45,
+      "address": 147,
+      "gateway": 65,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 45,
+      "id": 46,
+      "address": 148,
+      "gateway": 39,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 46,
+      "id": 47,
+      "address": 23,
+      "gateway": 111,
+      "computer_model": 3,
+      "status_or_prediction": "User Now",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 47,
+      "id": 48,
+      "address": 151,
+      "gateway": 111,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 48,
+      "id": 49,
+      "address": 152,
+      "gateway": 42,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 49,
+      "id": 50,
+      "address": 153,
+      "gateway": 69,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 50,
+      "id": 51,
+      "address": 155,
+      "gateway": 19,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 51,
+      "id": 52,
+      "address": 158,
+      "gateway": 13,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 353
+    },
+    {
+      "index": 52,
+      "id": 53,
+      "address": 1,
+      "gateway": 107,
+      "computer_model": 15,
+      "status_or_prediction": "Server #Limited",
+      "obtained_from": 18.0,
+      "rfc": 362
+    },
+    {
+      "index": 53,
+      "id": 54,
+      "address": 65,
+      "gateway": 107,
+      "computer_model": 7,
+      "status_or_prediction": "NETRJS now (Telnet in June)",
+      "obtained_from": 4.0,
+      "rfc": 362
+    },
+    {
+      "index": 54,
+      "id": 55,
+      "address": 3,
+      "gateway": 108,
+      "computer_model": 6,
+      "status_or_prediction": "Server",
+      "obtained_from": 22.0,
+      "rfc": 362
+    },
+    {
+      "index": 55,
+      "id": 56,
+      "address": 4,
+      "gateway": 117,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 3.0,
+      "rfc": 362
+    },
+    {
+      "index": 56,
+      "id": 57,
+      "address": 7,
+      "gateway": 82,
+      "computer_model": 4,
+      "status_or_prediction": "User Only",
+      "obtained_from": 10.0,
+      "rfc": 362
+    },
+    {
+      "index": 57,
+      "id": 58,
+      "address": 71,
+      "gateway": 82,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 10.0,
+      "rfc": 362
+    },
+    {
+      "index": 58,
+      "id": 59,
+      "address": 8,
+      "gateway": 96,
+      "computer_model": 9,
+      "status_or_prediction": "Server",
+      "obtained_from": 6.0,
+      "rfc": 362
+    },
+    {
+      "index": 59,
+      "id": 60,
+      "address": 9,
+      "gateway": 43,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 7.0,
+      "rfc": 362
+    },
+    {
+      "index": 60,
+      "id": 61,
+      "address": 73,
+      "gateway": 43,
+      "computer_model": 12,
+      "status_or_prediction": "User Only",
+      "obtained_from": 7.0,
+      "rfc": 362
+    },
+    {
+      "index": 61,
+      "id": 62,
+      "address": 10,
+      "gateway": 52,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 15.0,
+      "rfc": 362
+    },
+    {
+      "index": 62,
+      "id": 63,
+      "address": 74,
+      "gateway": 52,
+      "computer_model": 18,
+      "status_or_prediction": "Server",
+      "obtained_from": 25.0,
+      "rfc": 362
+    },
+    {
+      "index": 63,
+      "id": 64,
+      "address": 11,
+      "gateway": 100,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 2.0,
+      "rfc": 362
+    },
+    {
+      "index": 64,
+      "id": 65,
+      "address": 12,
+      "gateway": 45,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 16.0,
+      "rfc": 362
+    },
+    {
+      "index": 65,
+      "id": 66,
+      "address": 13,
+      "gateway": 24,
+      "computer_model": 13,
+      "status_or_prediction": "June",
+      "obtained_from": 8.0,
+      "rfc": 362
+    },
+    {
+      "index": 66,
+      "id": 67,
+      "address": 15,
+      "gateway": 6,
+      "computer_model": 11,
+      "status_or_prediction": "Server",
+      "obtained_from": 17.0,
+      "rfc": 362
+    },
+    {
+      "index": 67,
+      "id": 68,
+      "address": 16,
+      "gateway": 6,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 24.0,
+      "rfc": 362
+    },
+    {
+      "index": 68,
+      "id": 69,
+      "address": 144,
+      "gateway": 6,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 69,
+      "id": 70,
+      "address": 145,
+      "gateway": 63,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 70,
+      "id": 71,
+      "address": 146,
+      "gateway": 81,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 71,
+      "id": 72,
+      "address": 19,
+      "gateway": 65,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 21.0,
+      "rfc": 362
+    },
+    {
+      "index": 72,
+      "id": 73,
+      "address": 147,
+      "gateway": 65,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 73,
+      "id": 74,
+      "address": 148,
+      "gateway": 39,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 74,
+      "id": 75,
+      "address": 23,
+      "gateway": 111,
+      "computer_model": 3,
+      "status_or_prediction": "User Now",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 75,
+      "id": 76,
+      "address": 151,
+      "gateway": 111,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 76,
+      "id": 77,
+      "address": 152,
+      "gateway": 42,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 77,
+      "id": 78,
+      "address": 153,
+      "gateway": 69,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 78,
+      "id": 79,
+      "address": 156,
+      "gateway": 12,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 79,
+      "id": 80,
+      "address": 158,
+      "gateway": 13,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 362
+    },
+    {
+      "index": 80,
+      "id": 81,
+      "address": 1,
+      "gateway": 107,
+      "computer_model": 15,
+      "status_or_prediction": "Server #Limited",
+      "obtained_from": 18.0,
+      "rfc": 366
+    },
+    {
+      "index": 81,
+      "id": 82,
+      "address": 65,
+      "gateway": 107,
+      "computer_model": 7,
+      "status_or_prediction": "NETRJS now (Telnet in June)",
+      "obtained_from": 4.0,
+      "rfc": 366
+    },
+    {
+      "index": 82,
+      "id": 83,
+      "address": 3,
+      "gateway": 108,
+      "computer_model": 6,
+      "status_or_prediction": "Server",
+      "obtained_from": 22.0,
+      "rfc": 366
+    },
+    {
+      "index": 83,
+      "id": 84,
+      "address": 4,
+      "gateway": 117,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 3.0,
+      "rfc": 366
+    },
+    {
+      "index": 84,
+      "id": 85,
+      "address": 7,
+      "gateway": 82,
+      "computer_model": 4,
+      "status_or_prediction": "User Only",
+      "obtained_from": 10.0,
+      "rfc": 366
+    },
+    {
+      "index": 85,
+      "id": 86,
+      "address": 71,
+      "gateway": 82,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 10.0,
+      "rfc": 366
+    },
+    {
+      "index": 86,
+      "id": 87,
+      "address": 8,
+      "gateway": 96,
+      "computer_model": 9,
+      "status_or_prediction": "Server",
+      "obtained_from": 6.0,
+      "rfc": 366
+    },
+    {
+      "index": 87,
+      "id": 88,
+      "address": 9,
+      "gateway": 43,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 7.0,
+      "rfc": 366
+    },
+    {
+      "index": 88,
+      "id": 89,
+      "address": 73,
+      "gateway": 43,
+      "computer_model": 12,
+      "status_or_prediction": "User Only",
+      "obtained_from": 7.0,
+      "rfc": 366
+    },
+    {
+      "index": 89,
+      "id": 90,
+      "address": 10,
+      "gateway": 52,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 15.0,
+      "rfc": 366
+    },
+    {
+      "index": 90,
+      "id": 91,
+      "address": 74,
+      "gateway": 52,
+      "computer_model": 18,
+      "status_or_prediction": "Server",
+      "obtained_from": 25.0,
+      "rfc": 366
+    },
+    {
+      "index": 91,
+      "id": 92,
+      "address": 138,
+      "gateway": 52,
+      "computer_model": 17,
+      "status_or_prediction": "User Only",
+      "obtained_from": 23.0,
+      "rfc": 366
+    },
+    {
+      "index": 92,
+      "id": 93,
+      "address": 11,
+      "gateway": 100,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 2.0,
+      "rfc": 366
+    },
+    {
+      "index": 93,
+      "id": 94,
+      "address": 12,
+      "gateway": 45,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 16.0,
+      "rfc": 366
+    },
+    {
+      "index": 94,
+      "id": 95,
+      "address": 13,
+      "gateway": 24,
+      "computer_model": 13,
+      "status_or_prediction": "July",
+      "obtained_from": 8.0,
+      "rfc": 366
+    },
+    {
+      "index": 95,
+      "id": 96,
+      "address": 15,
+      "gateway": 6,
+      "computer_model": 11,
+      "status_or_prediction": "Server",
+      "obtained_from": 17.0,
+      "rfc": 366
+    },
+    {
+      "index": 96,
+      "id": 97,
+      "address": 16,
+      "gateway": 6,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 24.0,
+      "rfc": 366
+    },
+    {
+      "index": 97,
+      "id": 98,
+      "address": 144,
+      "gateway": 6,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 98,
+      "id": 99,
+      "address": 145,
+      "gateway": 63,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 99,
+      "id": 100,
+      "address": 146,
+      "gateway": 81,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 100,
+      "id": 101,
+      "address": 19,
+      "gateway": 65,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 21.0,
+      "rfc": 366
+    },
+    {
+      "index": 101,
+      "id": 102,
+      "address": 147,
+      "gateway": 65,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 102,
+      "id": 103,
+      "address": 148,
+      "gateway": 39,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 103,
+      "id": 104,
+      "address": 23,
+      "gateway": 111,
+      "computer_model": 3,
+      "status_or_prediction": "User Now",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 104,
+      "id": 105,
+      "address": 151,
+      "gateway": 111,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 105,
+      "id": 106,
+      "address": 152,
+      "gateway": 42,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 106,
+      "id": 107,
+      "address": 153,
+      "gateway": 69,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 107,
+      "id": 108,
+      "address": 156,
+      "gateway": 12,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 108,
+      "id": 109,
+      "address": 158,
+      "gateway": 13,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 366
+    },
+    {
+      "index": 109,
+      "id": 110,
+      "address": 1,
+      "gateway": 107,
+      "computer_model": 15,
+      "status_or_prediction": "Server #Limited",
+      "obtained_from": 18.0,
+      "rfc": 367
+    },
+    {
+      "index": 110,
+      "id": 111,
+      "address": 65,
+      "gateway": 107,
+      "computer_model": 7,
+      "status_or_prediction": "NETRJS now (Telnet in June)",
+      "obtained_from": 4.0,
+      "rfc": 367
+    },
+    {
+      "index": 111,
+      "id": 112,
+      "address": 3,
+      "gateway": 108,
+      "computer_model": 6,
+      "status_or_prediction": "Server",
+      "obtained_from": 22.0,
+      "rfc": 367
+    },
+    {
+      "index": 112,
+      "id": 113,
+      "address": 4,
+      "gateway": 117,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 3.0,
+      "rfc": 367
+    },
+    {
+      "index": 113,
+      "id": 114,
+      "address": 7,
+      "gateway": 82,
+      "computer_model": 4,
+      "status_or_prediction": "User Only",
+      "obtained_from": 10.0,
+      "rfc": 367
+    },
+    {
+      "index": 114,
+      "id": 115,
+      "address": 71,
+      "gateway": 82,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 10.0,
+      "rfc": 367
+    },
+    {
+      "index": 115,
+      "id": 116,
+      "address": 8,
+      "gateway": 96,
+      "computer_model": 8,
+      "status_or_prediction": "Server",
+      "obtained_from": 6.0,
+      "rfc": 367
+    },
+    {
+      "index": 116,
+      "id": 117,
+      "address": 9,
+      "gateway": 43,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 7.0,
+      "rfc": 367
+    },
+    {
+      "index": 117,
+      "id": 118,
+      "address": 73,
+      "gateway": 43,
+      "computer_model": 12,
+      "status_or_prediction": "User Only",
+      "obtained_from": 7.0,
+      "rfc": 367
+    },
+    {
+      "index": 118,
+      "id": 119,
+      "address": 10,
+      "gateway": 52,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 15.0,
+      "rfc": 367
+    },
+    {
+      "index": 119,
+      "id": 120,
+      "address": 74,
+      "gateway": 52,
+      "computer_model": 18,
+      "status_or_prediction": "Server",
+      "obtained_from": 25.0,
+      "rfc": 367
+    },
+    {
+      "index": 120,
+      "id": 121,
+      "address": 138,
+      "gateway": 52,
+      "computer_model": 17,
+      "status_or_prediction": "User Only",
+      "obtained_from": 23.0,
+      "rfc": 367
+    },
+    {
+      "index": 121,
+      "id": 122,
+      "address": 11,
+      "gateway": 100,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 2.0,
+      "rfc": 367
+    },
+    {
+      "index": 122,
+      "id": 123,
+      "address": 12,
+      "gateway": 45,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 16.0,
+      "rfc": 367
+    },
+    {
+      "index": 123,
+      "id": 124,
+      "address": 13,
+      "gateway": 24,
+      "computer_model": 13,
+      "status_or_prediction": "July",
+      "obtained_from": 8.0,
+      "rfc": 367
+    },
+    {
+      "index": 124,
+      "id": 125,
+      "address": 15,
+      "gateway": 6,
+      "computer_model": 11,
+      "status_or_prediction": "Server",
+      "obtained_from": 17.0,
+      "rfc": 367
+    },
+    {
+      "index": 125,
+      "id": 126,
+      "address": 16,
+      "gateway": 6,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 24.0,
+      "rfc": 367
+    },
+    {
+      "index": 126,
+      "id": 127,
+      "address": 144,
+      "gateway": 6,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 127,
+      "id": 128,
+      "address": 145,
+      "gateway": 63,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 128,
+      "id": 129,
+      "address": 146,
+      "gateway": 81,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 129,
+      "id": 130,
+      "address": 19,
+      "gateway": 65,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 21.0,
+      "rfc": 367
+    },
+    {
+      "index": 130,
+      "id": 131,
+      "address": 147,
+      "gateway": 65,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 131,
+      "id": 132,
+      "address": 148,
+      "gateway": 39,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 132,
+      "id": 133,
+      "address": 23,
+      "gateway": 111,
+      "computer_model": 3,
+      "status_or_prediction": "User Now",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 133,
+      "id": 134,
+      "address": 151,
+      "gateway": 111,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 134,
+      "id": 135,
+      "address": 152,
+      "gateway": 42,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 135,
+      "id": 136,
+      "address": 153,
+      "gateway": 69,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 136,
+      "id": 137,
+      "address": 156,
+      "gateway": 12,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 137,
+      "id": 138,
+      "address": 158,
+      "gateway": 13,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 367
+    },
+    {
+      "index": 138,
+      "id": 139,
+      "address": 1,
+      "gateway": 107,
+      "computer_model": 15,
+      "status_or_prediction": "SERVER #Limited",
+      "obtained_from": 18.0,
+      "rfc": 370
+    },
+    {
+      "index": 139,
+      "id": 140,
+      "address": 65,
+      "gateway": 107,
+      "computer_model": 7,
+      "status_or_prediction": "NETRJS now (Telnet in June)",
+      "obtained_from": 4.0,
+      "rfc": 370
+    },
+    {
+      "index": 140,
+      "id": 141,
+      "address": 3,
+      "gateway": 108,
+      "computer_model": 6,
+      "status_or_prediction": "Server",
+      "obtained_from": 22.0,
+      "rfc": 370
+    },
+    {
+      "index": 141,
+      "id": 142,
+      "address": 4,
+      "gateway": 117,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 3.0,
+      "rfc": 370
+    },
+    {
+      "index": 142,
+      "id": 143,
+      "address": 7,
+      "gateway": 82,
+      "computer_model": 4,
+      "status_or_prediction": "User Only",
+      "obtained_from": 10.0,
+      "rfc": 370
+    },
+    {
+      "index": 143,
+      "id": 144,
+      "address": 71,
+      "gateway": 82,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 10.0,
+      "rfc": 370
+    },
+    {
+      "index": 144,
+      "id": 145,
+      "address": 8,
+      "gateway": 96,
+      "computer_model": 9,
+      "status_or_prediction": "Server",
+      "obtained_from": 6.0,
+      "rfc": 370
+    },
+    {
+      "index": 145,
+      "id": 146,
+      "address": 9,
+      "gateway": 43,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 7.0,
+      "rfc": 370
+    },
+    {
+      "index": 146,
+      "id": 147,
+      "address": 73,
+      "gateway": 43,
+      "computer_model": 12,
+      "status_or_prediction": "User Only",
+      "obtained_from": 7.0,
+      "rfc": 370
+    },
+    {
+      "index": 147,
+      "id": 148,
+      "address": 10,
+      "gateway": 52,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 15.0,
+      "rfc": 370
+    },
+    {
+      "index": 148,
+      "id": 149,
+      "address": 74,
+      "gateway": 52,
+      "computer_model": 18,
+      "status_or_prediction": "Server",
+      "obtained_from": 25.0,
+      "rfc": 370
+    },
+    {
+      "index": 149,
+      "id": 150,
+      "address": 138,
+      "gateway": 52,
+      "computer_model": 17,
+      "status_or_prediction": "User Only",
+      "obtained_from": 23.0,
+      "rfc": 370
+    },
+    {
+      "index": 150,
+      "id": 151,
+      "address": 11,
+      "gateway": 100,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 2.0,
+      "rfc": 370
+    },
+    {
+      "index": 151,
+      "id": 152,
+      "address": 12,
+      "gateway": 45,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 16.0,
+      "rfc": 370
+    },
+    {
+      "index": 152,
+      "id": 153,
+      "address": 13,
+      "gateway": 24,
+      "computer_model": 13,
+      "status_or_prediction": "July",
+      "obtained_from": 8.0,
+      "rfc": 370
+    },
+    {
+      "index": 153,
+      "id": 154,
+      "address": 15,
+      "gateway": 6,
+      "computer_model": 11,
+      "status_or_prediction": "Server",
+      "obtained_from": 17.0,
+      "rfc": 370
+    },
+    {
+      "index": 154,
+      "id": 155,
+      "address": 16,
+      "gateway": 6,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 24.0,
+      "rfc": 370
+    },
+    {
+      "index": 155,
+      "id": 156,
+      "address": 144,
+      "gateway": 6,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 156,
+      "id": 157,
+      "address": 145,
+      "gateway": 63,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 157,
+      "id": 158,
+      "address": 146,
+      "gateway": 81,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 158,
+      "id": 159,
+      "address": 19,
+      "gateway": 65,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 21.0,
+      "rfc": 370
+    },
+    {
+      "index": 159,
+      "id": 160,
+      "address": 147,
+      "gateway": 65,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 160,
+      "id": 161,
+      "address": 148,
+      "gateway": 39,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 161,
+      "id": 162,
+      "address": 23,
+      "gateway": 111,
+      "computer_model": 3,
+      "status_or_prediction": "User Now",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 162,
+      "id": 163,
+      "address": 151,
+      "gateway": 111,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 163,
+      "id": 164,
+      "address": 152,
+      "gateway": 42,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 164,
+      "id": 165,
+      "address": 153,
+      "gateway": 69,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 165,
+      "id": 166,
+      "address": 156,
+      "gateway": 12,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 166,
+      "id": 167,
+      "address": 158,
+      "gateway": 13,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 370
+    },
+    {
+      "index": 167,
+      "id": 168,
+      "address": 1,
+      "gateway": 107,
+      "computer_model": 15,
+      "status_or_prediction": "Sever #Limited",
+      "obtained_from": 18.0,
+      "rfc": 376
+    },
+    {
+      "index": 168,
+      "id": 169,
+      "address": 65,
+      "gateway": 107,
+      "computer_model": 7,
+      "status_or_prediction": "NETRJS now (Telnet in June)",
+      "obtained_from": 4.0,
+      "rfc": 376
+    },
+    {
+      "index": 169,
+      "id": 170,
+      "address": 3,
+      "gateway": 108,
+      "computer_model": 6,
+      "status_or_prediction": "Server",
+      "obtained_from": 22.0,
+      "rfc": 376
+    },
+    {
+      "index": 170,
+      "id": 171,
+      "address": 4,
+      "gateway": 117,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 3.0,
+      "rfc": 376
+    },
+    {
+      "index": 171,
+      "id": 172,
+      "address": 7,
+      "gateway": 82,
+      "computer_model": 4,
+      "status_or_prediction": "User Only",
+      "obtained_from": 10.0,
+      "rfc": 376
+    },
+    {
+      "index": 172,
+      "id": 173,
+      "address": 71,
+      "gateway": 82,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 10.0,
+      "rfc": 376
+    },
+    {
+      "index": 173,
+      "id": 174,
+      "address": 8,
+      "gateway": 96,
+      "computer_model": 9,
+      "status_or_prediction": "Server",
+      "obtained_from": 6.0,
+      "rfc": 376
+    },
+    {
+      "index": 174,
+      "id": 175,
+      "address": 9,
+      "gateway": 43,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 7.0,
+      "rfc": 376
+    },
+    {
+      "index": 175,
+      "id": 176,
+      "address": 73,
+      "gateway": 43,
+      "computer_model": 12,
+      "status_or_prediction": "User Only",
+      "obtained_from": 7.0,
+      "rfc": 376
+    },
+    {
+      "index": 176,
+      "id": 177,
+      "address": 10,
+      "gateway": 52,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 15.0,
+      "rfc": 376
+    },
+    {
+      "index": 177,
+      "id": 178,
+      "address": 74,
+      "gateway": 52,
+      "computer_model": 18,
+      "status_or_prediction": "Server",
+      "obtained_from": 25.0,
+      "rfc": 376
+    },
+    {
+      "index": 178,
+      "id": 179,
+      "address": 138,
+      "gateway": 52,
+      "computer_model": 17,
+      "status_or_prediction": "User Only",
+      "obtained_from": 23.0,
+      "rfc": 376
+    },
+    {
+      "index": 179,
+      "id": 180,
+      "address": 11,
+      "gateway": 100,
+      "computer_model": 13,
+      "status_or_prediction": "Server",
+      "obtained_from": 2.0,
+      "rfc": 376
+    },
+    {
+      "index": 180,
+      "id": 181,
+      "address": 12,
+      "gateway": 45,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 16.0,
+      "rfc": 376
+    },
+    {
+      "index": 181,
+      "id": 182,
+      "address": 13,
+      "gateway": 24,
+      "computer_model": 13,
+      "status_or_prediction": "July",
+      "obtained_from": 8.0,
+      "rfc": 376
+    },
+    {
+      "index": 182,
+      "id": 183,
+      "address": 15,
+      "gateway": 6,
+      "computer_model": 11,
+      "status_or_prediction": "Server",
+      "obtained_from": 17.0,
+      "rfc": 376
+    },
+    {
+      "index": 183,
+      "id": 184,
+      "address": 16,
+      "gateway": 6,
+      "computer_model": 5,
+      "status_or_prediction": "Soon",
+      "obtained_from": 24.0,
+      "rfc": 376
+    },
+    {
+      "index": 184,
+      "id": 185,
+      "address": 144,
+      "gateway": 6,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 185,
+      "id": 186,
+      "address": 145,
+      "gateway": 63,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 186,
+      "id": 187,
+      "address": 146,
+      "gateway": 81,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 187,
+      "id": 188,
+      "address": 19,
+      "gateway": 65,
+      "computer_model": 14,
+      "status_or_prediction": "User Only",
+      "obtained_from": 21.0,
+      "rfc": 376
+    },
+    {
+      "index": 188,
+      "id": 189,
+      "address": 147,
+      "gateway": 65,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 189,
+      "id": 190,
+      "address": 148,
+      "gateway": 39,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 190,
+      "id": 191,
+      "address": 23,
+      "gateway": 111,
+      "computer_model": 3,
+      "status_or_prediction": "User Now",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 191,
+      "id": 192,
+      "address": 151,
+      "gateway": 111,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 192,
+      "id": 193,
+      "address": 152,
+      "gateway": 42,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 193,
+      "id": 194,
+      "address": 153,
+      "gateway": 69,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 194,
+      "id": 195,
+      "address": 156,
+      "gateway": 12,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    },
+    {
+      "index": 195,
+      "id": 196,
+      "address": 158,
+      "gateway": 13,
+      "computer_model": 16,
+      "status_or_prediction": "User Only",
+      "obtained_from": null,
+      "rfc": 376
+    }
+  ]
+}
