@@ -1,1 +1,752 @@
-{"schema":{"fields":[{"name":"index","type":"integer"},{"name":"acronym","type":"string"},{"name":"long_name","type":"string"},{"name":"description","type":"string"}],"primaryKey":["index"],"pandas_version":"1.4.0"},"data":[{"index":0,"acronym":"ABERDEEN","long_name":"Aberdeen Proving Ground","description":null},{"index":1,"acronym":"ACCAT","long_name":"Advanced Command Control Architectural Testbed (ACCAT)","description":"\"The Advanced Command Control Architectural Testbed (ACCAT) is a facility designed to support evaluation of the applicability of various new computer\u2014communication and information processing techniques to military command and control problems. The ACCAT program is sponsored jointly by ARPA and the Navy.\" (From BBN Report No. 3677)."},{"index":2,"acronym":"AFGL","long_name":"Air Force Geophysics Laboratory","description":null},{"index":3,"acronym":"AFGWC","long_name":"Air Force Global Weather Center","description":null},{"index":4,"acronym":"AFWL","long_name":"Air Force Weapons Laboratory","description":null},{"index":5,"acronym":"AMES","long_name":"Ames Research Center","description":null},{"index":6,"acronym":"AMES 15","long_name":"Ames Research Center","description":null},{"index":7,"acronym":"AMES 16","long_name":"Ames Research Center","description":null},{"index":8,"acronym":"ANDRW","long_name":"Andrews Air Force Base","description":null},{"index":9,"acronym":"ANL","long_name":"Argonne National Laboratory","description":null},{"index":10,"acronym":"ARGONNE","long_name":"Argonne National Laboratory","description":null},{"index":11,"acronym":"ARPA","long_name":"Defense Advanced Research Projects Agency","description":null},{"index":12,"acronym":"BBN","long_name":"Bolt Beranek and Newman Inc.","description":null},{"index":13,"acronym":"BBN 30","long_name":"Bolt Beranek and Newman Inc.","description":null},{"index":14,"acronym":"BBN 40","long_name":"Bolt Beranek and Newman Inc.","description":null},{"index":15,"acronym":"BBN 63","long_name":"Bolt Beranek and Newman Inc.","description":null},{"index":16,"acronym":"BBN 72","long_name":"Bolt Beranek and Newman Inc.","description":null},{"index":17,"acronym":"BBN-10X","long_name":"Bolt Beranek and Newman Inc.","description":null},{"index":18,"acronym":"BELVOIR","long_name":"Fort Belvoir","description":null},{"index":19,"acronym":"BERK","long_name":"University of California, Berkley","description":null},{"index":20,"acronym":"BRAGG","long_name":"Fort Bragg","description":null},{"index":21,"acronym":"BROOKS","long_name":"Brooks Air Force Base","description":null},{"index":22,"acronym":"BURROUGHS","long_name":"Burroughs Corporation","description":null},{"index":23,"acronym":"CASE","long_name":"Case Western Reserve University","description":null},{"index":24,"acronym":"CCA","long_name":"Computer Corporation of America","description":null},{"index":25,"acronym":"CHINA","long_name":"China Lake","description":null},{"index":26,"acronym":"CIT","long_name":"California Institute of Technology","description":null},{"index":27,"acronym":"CMU","long_name":"Carnegie-Mellon University","description":null},{"index":28,"acronym":"COLLINS","long_name":"Collins Communications Systems Division","description":"Collins Communications Systems Division at Rockwell International"},{"index":29,"acronym":"CORADCOM","long_name":"Communications Research and Development Command (CORADCOM)","description":"CORADCOM was one of three subdivisions of the Electronics Command (ECOM) at Fort Monmouth. In 1981, CORADCOM was absorbed into a new organization known as Communications-Electronics Command (CECOM)."},{"index":30,"acronym":"DARCOM","long_name":"U.S. Army Material Development and Readiness Command (DARCOM)","description":"DARCOM is the acronym of the U.S. Army Material Development and Readiness Command. A multi-billion dollar procurement Command, DARCOM is the wholesale logistics arm of the U.S. Army. Its geographically decentralized staff is predominantly civilian."},{"index":31,"acronym":"DAVID","long_name":"David Taylor Naval Ship Research and Development Center","description":null},{"index":32,"acronym":"DCEC","long_name":"Defense Communications Engineering Center","description":null},{"index":33,"acronym":"DCEX","long_name":"Defence Communications Engineering Center","description":null},{"index":34,"acronym":"DEC","long_name":"Digital Equipment Corporation","description":null},{"index":35,"acronym":"DOCB","long_name":"Department of Commerce, Boulder","description":null},{"index":36,"acronym":"DTI","long_name":"Digital Technology, Inc.","description":null},{"index":37,"acronym":"EGLIN","long_name":"Eglin Air Force Base","description":null},{"index":38,"acronym":"ETAC","long_name":"Air Force Environmental Technical Application Center","description":null},{"index":39,"acronym":"FNWC","long_name":"Fleet Numerical Weather Center","description":null},{"index":40,"acronym":"GUNTER","long_name":"Gunter Air Force Station","description":null},{"index":41,"acronym":"GWC","long_name":"Air Force Global Weather Center","description":null},{"index":42,"acronym":"HARVARD","long_name":"Harvard University","description":"Harvard University Aiken Computation Laboratory"},{"index":43,"acronym":"HAWAII","long_name":"University of Hawaii","description":"The University of Hawaii was the first to connect to ARPANET via satellite."},{"index":44,"acronym":"ILLINOIS","long_name":"University of Illinois","description":null},{"index":45,"acronym":"ISI 22","long_name":"Information Sciences Institute (ISI)","description":"Information Sciences Institute at USC"},{"index":46,"acronym":"ISI 27","long_name":"Information Sciences Institute (ISI)","description":"Information Sciences Institute at USC"},{"index":47,"acronym":"ISI 52","long_name":"Information Sciences Institute (ISI)","description":"Information Sciences Institute at USC"},{"index":48,"acronym":"JOHNS","long_name":"Johns Hopkins University Applied Physics Laboratory","description":null},{"index":49,"acronym":"KIRTLAND","long_name":"Kirtland Air Force Base (AFB)","description":null},{"index":50,"acronym":"LBL","long_name":"Lawrence Berkeley Laboratory (LBL)","description":null},{"index":51,"acronym":"LINCOLN","long_name":"Lincoln Laboratory","description":null},{"index":52,"acronym":"LLL","long_name":"Lawrence Livermore National Laboratory","description":null},{"index":53,"acronym":"LONDON","long_name":"University College London","description":null},{"index":54,"acronym":"MCCLELLAN","long_name":"McClellan Air Force Base","description":null},{"index":55,"acronym":"MIT","long_name":"Massachusetts Institute of Technology","description":null},{"index":56,"acronym":"MIT 44","long_name":"Massachusetts Institute of Technology","description":null},{"index":57,"acronym":"MIT 6","long_name":"Massachusetts Institute of Technology","description":null},{"index":58,"acronym":"MIT 77","long_name":"Massachusetts Institute of Technology","description":null},{"index":59,"acronym":"MIT-IPC","long_name":"Massachusetts Institute of Technology","description":null},{"index":60,"acronym":"MIT-MAC","long_name":"Massachusetts Institute of Technology","description":null},{"index":61,"acronym":"MIT-TIP","long_name":"Massachusetts Institute of Technology","description":null},{"index":62,"acronym":"MITRE","long_name":"MITRE Corporation","description":null},{"index":63,"acronym":"MOFFETT","long_name":"Moffett Field","description":null},{"index":64,"acronym":"NBS","long_name":"National Bureau of Standards","description":null},{"index":65,"acronym":"NCC","long_name":"ARPA Network Control Center (NCC)","description":null},{"index":66,"acronym":"NELC","long_name":"Naval Electronics Laboratory Center (NELC)","description":"In 1977, NELC was merged into Naval Ocean Systems Center (NOSC)."},{"index":67,"acronym":"NIH","long_name":"National Institutes of Health","description":null},{"index":68,"acronym":"NOAA","long_name":"National Oceanic and Atmospheric Administration","description":null},{"index":69,"acronym":"NORSAR","long_name":"Norwegian Seismic Array","description":"NORSAR or Norwegian Seismic Array was established in 1968 as part of the Norwegian-US agreement for the detection of earthquakes and nuclear explosions."},{"index":70,"acronym":"NOSC","long_name":"Naval Ocean Systems Center","description":null},{"index":71,"acronym":"NPS","long_name":"Naval Postgraduate School","description":null},{"index":72,"acronym":"NRL","long_name":"Naval Research Laboratory","description":null},{"index":73,"acronym":"NSA","long_name":"National Security Agency","description":null},{"index":74,"acronym":"NSWC","long_name":"Naval Surface Weapons Center","description":null},{"index":75,"acronym":"NUC","long_name":"Naval Undersea Research and Development Center","description":null},{"index":76,"acronym":"NUSC","long_name":"Naval Underwater Systems Center","description":null},{"index":77,"acronym":"NYU","long_name":"New York University","description":null},{"index":78,"acronym":"PENTAGON","long_name":"The Pentagon","description":null},{"index":79,"acronym":"PURDUE","long_name":"Purdue University","description":null},{"index":80,"acronym":"RADC","long_name":"Rome Air Development Center","description":null},{"index":81,"acronym":"RAND","long_name":"The Rand Corporation","description":null},{"index":82,"acronym":"RCC","long_name":"Rand Computation Center","description":null},{"index":83,"acronym":"RCC 49","long_name":"Rand Computation Center","description":null},{"index":84,"acronym":"RCC 5","long_name":"Rand Computation Center","description":null},{"index":85,"acronym":"RCC 71","long_name":"Rand Computation Center","description":null},{"index":86,"acronym":"RML","long_name":"Range Measurements Laboratory","description":"Range Measurements Laboratory at Patrick Air Force Base (AFB)"},{"index":87,"acronym":"ROBINS","long_name":"Robins Air Force Base (AFB)","description":null},{"index":88,"acronym":"RUTGERS","long_name":"Rutgers University","description":null},{"index":89,"acronym":"S1LAB","long_name":"S-1 Supercomputer","description":"The S-1 project was an attempt to build a family of multiprocessor supercomputers. The project was envisioned by Lowell Wood at the Lawrence Livermore National Lab in 1975 and staffed for the first three years by two Stanford University Computer Science graduate students, Tom McWilliams and Curt Widdoes."},{"index":90,"acronym":"SAC","long_name":"Strategic Air Command","description":"Strategic Air Command at Offutt Air Force Base"},{"index":91,"acronym":"SANDIA","long_name":"Sandia National Laboratories","description":null},{"index":92,"acronym":"SCOTT","long_name":"Scott Air Force Base","description":null},{"index":93,"acronym":"SCRL","long_name":"Speech Communications Research Laboratory","description":null},{"index":94,"acronym":"SDAC","long_name":"Seismic Data Analysis Center","description":"The Alexandria Laboratories Division of Teledyne Geotech operated the Seismic Data Analysis Center SDAC during the fifteen 15 month period beginning 1 July 1975 and ending 30 September 1976."},{"index":95,"acronym":"SDC","long_name":"System Development Corporation","description":null},{"index":96,"acronym":"SRI","long_name":"SRI International","description":null},{"index":97,"acronym":"SRI 2","long_name":"SRI International","description":null},{"index":98,"acronym":"SRI 51","long_name":"SRI International","description":null},{"index":99,"acronym":"STANFORD","long_name":"Stanford University","description":null},{"index":100,"acronym":"STLA","long_name":"Army Troop Support and Aviation Readiness Command (TSARCOM)","description":null},{"index":101,"acronym":"SUMEX","long_name":"SUMEX Computer Project","description":"SUMEX Computer Project at the Stanford University Medical Center"},{"index":102,"acronym":"TEXAS","long_name":"University of Texas","description":"University of Texas Computation Center"},{"index":103,"acronym":"TINKER","long_name":"Tinker Air Force Base","description":null},{"index":104,"acronym":"TSARCOM","long_name":"Army Troop Support and Aviation Readiness Command (TSARCOM)","description":null},{"index":105,"acronym":"TYMSHARE","long_name":"Tymshare, Inc.","description":null},{"index":106,"acronym":"UCLA","long_name":"University of California, Los Angeles","description":null},{"index":107,"acronym":"UCSB","long_name":"University of California, Santa Barbara","description":null},{"index":108,"acronym":"UCSD","long_name":"Univerisity of California, San Diego","description":null},{"index":109,"acronym":"UDEL","long_name":"University of Delaware","description":null},{"index":110,"acronym":"USC","long_name":"University of Southern California","description":null},{"index":111,"acronym":"USC-I","long_name":"University of Southern California","description":null},{"index":112,"acronym":"USC-ISI","long_name":"University of Southern California","description":null},{"index":113,"acronym":"USGS 1","long_name":"U.S. Geological Survey","description":null},{"index":114,"acronym":"USGS 2","long_name":"U.S. Geological Survey","description":null},{"index":115,"acronym":"USGS 3","long_name":"U.S. Geological Survey","description":null},{"index":116,"acronym":"UTAH","long_name":"University of Utah","description":null},{"index":117,"acronym":"UWASH","long_name":"University of Washington","description":null},{"index":118,"acronym":"UWISC","long_name":"University of Wisconsin","description":null},{"index":119,"acronym":"WPAFB","long_name":"Wright-Patterson Air Force Base (AFB)","description":null},{"index":120,"acronym":"WSMR","long_name":"White Sands Missile Range","description":null},{"index":121,"acronym":"XEROX","long_name":"Xerox Corporation","description":null},{"index":122,"acronym":"YUMA","long_name":"Army Yuma Proving Ground","description":null}]}
+{
+  "schema": {
+    "fields": [
+      { "name": "index", "type": "integer" },
+      { "name": "acronym", "type": "string" },
+      { "name": "long_name", "type": "string" },
+      { "name": "description", "type": "string" }
+    ],
+    "primaryKey": ["index"],
+    "pandas_version": "1.4.0"
+  },
+  "data": [
+    {
+      "index": 0,
+      "acronym": "ABERDEEN",
+      "long_name": "Aberdeen Proving Ground",
+      "description": null
+    },
+    {
+      "index": 1,
+      "acronym": "ACCAT",
+      "long_name": "Advanced Command Control Architectural Testbed (ACCAT)",
+      "description": "\"The Advanced Command Control Architectural Testbed (ACCAT) is a facility designed to support evaluation of the applicability of various new computer\u2014communication and information processing techniques to military command and control problems. The ACCAT program is sponsored jointly by ARPA and the Navy.\" (From BBN Report No. 3677)."
+    },
+    {
+      "index": 2,
+      "acronym": "AFGL",
+      "long_name": "Air Force Geophysics Laboratory",
+      "description": null
+    },
+    {
+      "index": 3,
+      "acronym": "AFGWC",
+      "long_name": "Air Force Global Weather Center",
+      "description": null
+    },
+    {
+      "index": 4,
+      "acronym": "AFWL",
+      "long_name": "Air Force Weapons Laboratory",
+      "description": null
+    },
+    {
+      "index": 5,
+      "acronym": "AMES",
+      "long_name": "Ames Research Center",
+      "description": null
+    },
+    {
+      "index": 6,
+      "acronym": "AMES 15",
+      "long_name": "Ames Research Center",
+      "description": null
+    },
+    {
+      "index": 7,
+      "acronym": "AMES 16",
+      "long_name": "Ames Research Center",
+      "description": null
+    },
+    {
+      "index": 8,
+      "acronym": "ANDRW",
+      "long_name": "Andrews Air Force Base",
+      "description": null
+    },
+    {
+      "index": 9,
+      "acronym": "ANL",
+      "long_name": "Argonne National Laboratory",
+      "description": null
+    },
+    {
+      "index": 10,
+      "acronym": "ARGONNE",
+      "long_name": "Argonne National Laboratory",
+      "description": null
+    },
+    {
+      "index": 11,
+      "acronym": "ARPA",
+      "long_name": "Defense Advanced Research Projects Agency",
+      "description": null
+    },
+    {
+      "index": 12,
+      "acronym": "BBN",
+      "long_name": "Bolt Beranek and Newman Inc.",
+      "description": null
+    },
+    {
+      "index": 13,
+      "acronym": "BBN 30",
+      "long_name": "Bolt Beranek and Newman Inc.",
+      "description": null
+    },
+    {
+      "index": 14,
+      "acronym": "BBN 40",
+      "long_name": "Bolt Beranek and Newman Inc.",
+      "description": null
+    },
+    {
+      "index": 15,
+      "acronym": "BBN 63",
+      "long_name": "Bolt Beranek and Newman Inc.",
+      "description": null
+    },
+    {
+      "index": 16,
+      "acronym": "BBN 72",
+      "long_name": "Bolt Beranek and Newman Inc.",
+      "description": null
+    },
+    {
+      "index": 17,
+      "acronym": "BBN-10X",
+      "long_name": "Bolt Beranek and Newman Inc.",
+      "description": null
+    },
+    {
+      "index": 18,
+      "acronym": "BELVOIR",
+      "long_name": "Fort Belvoir",
+      "description": null
+    },
+    {
+      "index": 19,
+      "acronym": "BERK",
+      "long_name": "University of California, Berkley",
+      "description": null
+    },
+    {
+      "index": 20,
+      "acronym": "BRAGG",
+      "long_name": "Fort Bragg",
+      "description": null
+    },
+    {
+      "index": 21,
+      "acronym": "BROOKS",
+      "long_name": "Brooks Air Force Base",
+      "description": null
+    },
+    {
+      "index": 22,
+      "acronym": "BURROUGHS",
+      "long_name": "Burroughs Corporation",
+      "description": null
+    },
+    {
+      "index": 23,
+      "acronym": "CASE",
+      "long_name": "Case Western Reserve University",
+      "description": null
+    },
+    {
+      "index": 24,
+      "acronym": "CCA",
+      "long_name": "Computer Corporation of America",
+      "description": null
+    },
+    {
+      "index": 25,
+      "acronym": "CHINA",
+      "long_name": "China Lake",
+      "description": null
+    },
+    {
+      "index": 26,
+      "acronym": "CIT",
+      "long_name": "California Institute of Technology",
+      "description": null
+    },
+    {
+      "index": 27,
+      "acronym": "CMU",
+      "long_name": "Carnegie-Mellon University",
+      "description": null
+    },
+    {
+      "index": 28,
+      "acronym": "COLLINS",
+      "long_name": "Collins Communications Systems Division",
+      "description": "Collins Communications Systems Division at Rockwell International"
+    },
+    {
+      "index": 29,
+      "acronym": "CORADCOM",
+      "long_name": "Communications Research and Development Command (CORADCOM)",
+      "description": "CORADCOM was one of three subdivisions of the Electronics Command (ECOM) at Fort Monmouth. In 1981, CORADCOM was absorbed into a new organization known as Communications-Electronics Command (CECOM)."
+    },
+    {
+      "index": 30,
+      "acronym": "DARCOM",
+      "long_name": "U.S. Army Material Development and Readiness Command (DARCOM)",
+      "description": "DARCOM is the acronym of the U.S. Army Material Development and Readiness Command. A multi-billion dollar procurement Command, DARCOM is the wholesale logistics arm of the U.S. Army. Its geographically decentralized staff is predominantly civilian."
+    },
+    {
+      "index": 31,
+      "acronym": "DAVID",
+      "long_name": "David Taylor Naval Ship Research and Development Center",
+      "description": null
+    },
+    {
+      "index": 32,
+      "acronym": "DCEC",
+      "long_name": "Defense Communications Engineering Center",
+      "description": null
+    },
+    {
+      "index": 33,
+      "acronym": "DCEX",
+      "long_name": "Defence Communications Engineering Center",
+      "description": null
+    },
+    {
+      "index": 34,
+      "acronym": "DEC",
+      "long_name": "Digital Equipment Corporation",
+      "description": null
+    },
+    {
+      "index": 35,
+      "acronym": "DOCB",
+      "long_name": "Department of Commerce, Boulder",
+      "description": null
+    },
+    {
+      "index": 36,
+      "acronym": "DTI",
+      "long_name": "Digital Technology, Inc.",
+      "description": null
+    },
+    {
+      "index": 37,
+      "acronym": "EGLIN",
+      "long_name": "Eglin Air Force Base",
+      "description": null
+    },
+    {
+      "index": 38,
+      "acronym": "ETAC",
+      "long_name": "Air Force Environmental Technical Application Center",
+      "description": null
+    },
+    {
+      "index": 39,
+      "acronym": "FNWC",
+      "long_name": "Fleet Numerical Weather Center",
+      "description": null
+    },
+    {
+      "index": 40,
+      "acronym": "GUNTER",
+      "long_name": "Gunter Air Force Station",
+      "description": null
+    },
+    {
+      "index": 41,
+      "acronym": "GWC",
+      "long_name": "Air Force Global Weather Center",
+      "description": null
+    },
+    {
+      "index": 42,
+      "acronym": "HARVARD",
+      "long_name": "Harvard University",
+      "description": "Harvard University Aiken Computation Laboratory"
+    },
+    {
+      "index": 43,
+      "acronym": "HAWAII",
+      "long_name": "University of Hawaii",
+      "description": "The University of Hawaii was the first to connect to ARPANET via satellite."
+    },
+    {
+      "index": 44,
+      "acronym": "ILLINOIS",
+      "long_name": "University of Illinois",
+      "description": null
+    },
+    {
+      "index": 45,
+      "acronym": "ISI 22",
+      "long_name": "Information Sciences Institute (ISI)",
+      "description": "Information Sciences Institute at USC"
+    },
+    {
+      "index": 46,
+      "acronym": "ISI 27",
+      "long_name": "Information Sciences Institute (ISI)",
+      "description": "Information Sciences Institute at USC"
+    },
+    {
+      "index": 47,
+      "acronym": "ISI 52",
+      "long_name": "Information Sciences Institute (ISI)",
+      "description": "Information Sciences Institute at USC"
+    },
+    {
+      "index": 48,
+      "acronym": "JOHNS",
+      "long_name": "Johns Hopkins University Applied Physics Laboratory",
+      "description": null
+    },
+    {
+      "index": 49,
+      "acronym": "KIRTLAND",
+      "long_name": "Kirtland Air Force Base (AFB)",
+      "description": null
+    },
+    {
+      "index": 50,
+      "acronym": "LBL",
+      "long_name": "Lawrence Berkeley Laboratory (LBL)",
+      "description": null
+    },
+    {
+      "index": 51,
+      "acronym": "LINCOLN",
+      "long_name": "Lincoln Laboratory",
+      "description": null
+    },
+    {
+      "index": 52,
+      "acronym": "LLL",
+      "long_name": "Lawrence Livermore National Laboratory",
+      "description": null
+    },
+    {
+      "index": 53,
+      "acronym": "LONDON",
+      "long_name": "University College London",
+      "description": null
+    },
+    {
+      "index": 54,
+      "acronym": "MCCLELLAN",
+      "long_name": "McClellan Air Force Base",
+      "description": null
+    },
+    {
+      "index": 55,
+      "acronym": "MIT",
+      "long_name": "Massachusetts Institute of Technology",
+      "description": null
+    },
+    {
+      "index": 56,
+      "acronym": "MIT 44",
+      "long_name": "Massachusetts Institute of Technology",
+      "description": null
+    },
+    {
+      "index": 57,
+      "acronym": "MIT 6",
+      "long_name": "Massachusetts Institute of Technology",
+      "description": null
+    },
+    {
+      "index": 58,
+      "acronym": "MIT 77",
+      "long_name": "Massachusetts Institute of Technology",
+      "description": null
+    },
+    {
+      "index": 59,
+      "acronym": "MIT-IPC",
+      "long_name": "Massachusetts Institute of Technology",
+      "description": null
+    },
+    {
+      "index": 60,
+      "acronym": "MIT-MAC",
+      "long_name": "Massachusetts Institute of Technology",
+      "description": null
+    },
+    {
+      "index": 61,
+      "acronym": "MIT-TIP",
+      "long_name": "Massachusetts Institute of Technology",
+      "description": null
+    },
+    {
+      "index": 62,
+      "acronym": "MITRE",
+      "long_name": "MITRE Corporation",
+      "description": null
+    },
+    {
+      "index": 63,
+      "acronym": "MOFFETT",
+      "long_name": "Moffett Field",
+      "description": null
+    },
+    {
+      "index": 64,
+      "acronym": "NBS",
+      "long_name": "National Bureau of Standards",
+      "description": null
+    },
+    {
+      "index": 65,
+      "acronym": "NCC",
+      "long_name": "ARPA Network Control Center (NCC)",
+      "description": null
+    },
+    {
+      "index": 66,
+      "acronym": "NELC",
+      "long_name": "Naval Electronics Laboratory Center (NELC)",
+      "description": "In 1977, NELC was merged into Naval Ocean Systems Center (NOSC)."
+    },
+    {
+      "index": 67,
+      "acronym": "NIH",
+      "long_name": "National Institutes of Health",
+      "description": null
+    },
+    {
+      "index": 68,
+      "acronym": "NOAA",
+      "long_name": "National Oceanic and Atmospheric Administration",
+      "description": null
+    },
+    {
+      "index": 69,
+      "acronym": "NORSAR",
+      "long_name": "Norwegian Seismic Array",
+      "description": "NORSAR or Norwegian Seismic Array was established in 1968 as part of the Norwegian-US agreement for the detection of earthquakes and nuclear explosions."
+    },
+    {
+      "index": 70,
+      "acronym": "NOSC",
+      "long_name": "Naval Ocean Systems Center",
+      "description": null
+    },
+    {
+      "index": 71,
+      "acronym": "NPS",
+      "long_name": "Naval Postgraduate School",
+      "description": null
+    },
+    {
+      "index": 72,
+      "acronym": "NRL",
+      "long_name": "Naval Research Laboratory",
+      "description": null
+    },
+    {
+      "index": 73,
+      "acronym": "NSA",
+      "long_name": "National Security Agency",
+      "description": null
+    },
+    {
+      "index": 74,
+      "acronym": "NSWC",
+      "long_name": "Naval Surface Weapons Center",
+      "description": null
+    },
+    {
+      "index": 75,
+      "acronym": "NUC",
+      "long_name": "Naval Undersea Research and Development Center",
+      "description": null
+    },
+    {
+      "index": 76,
+      "acronym": "NUSC",
+      "long_name": "Naval Underwater Systems Center",
+      "description": null
+    },
+    {
+      "index": 77,
+      "acronym": "NYU",
+      "long_name": "New York University",
+      "description": null
+    },
+    {
+      "index": 78,
+      "acronym": "PENTAGON",
+      "long_name": "The Pentagon",
+      "description": null
+    },
+    {
+      "index": 79,
+      "acronym": "PURDUE",
+      "long_name": "Purdue University",
+      "description": null
+    },
+    {
+      "index": 80,
+      "acronym": "RADC",
+      "long_name": "Rome Air Development Center",
+      "description": null
+    },
+    {
+      "index": 81,
+      "acronym": "RAND",
+      "long_name": "The Rand Corporation",
+      "description": null
+    },
+    {
+      "index": 82,
+      "acronym": "RCC",
+      "long_name": "Rand Computation Center",
+      "description": null
+    },
+    {
+      "index": 83,
+      "acronym": "RCC 49",
+      "long_name": "Rand Computation Center",
+      "description": null
+    },
+    {
+      "index": 84,
+      "acronym": "RCC 5",
+      "long_name": "Rand Computation Center",
+      "description": null
+    },
+    {
+      "index": 85,
+      "acronym": "RCC 71",
+      "long_name": "Rand Computation Center",
+      "description": null
+    },
+    {
+      "index": 86,
+      "acronym": "RML",
+      "long_name": "Range Measurements Laboratory",
+      "description": "Range Measurements Laboratory at Patrick Air Force Base (AFB)"
+    },
+    {
+      "index": 87,
+      "acronym": "ROBINS",
+      "long_name": "Robins Air Force Base (AFB)",
+      "description": null
+    },
+    {
+      "index": 88,
+      "acronym": "RUTGERS",
+      "long_name": "Rutgers University",
+      "description": null
+    },
+    {
+      "index": 89,
+      "acronym": "S1LAB",
+      "long_name": "S-1 Supercomputer",
+      "description": "The S-1 project was an attempt to build a family of multiprocessor supercomputers. The project was envisioned by Lowell Wood at the Lawrence Livermore National Lab in 1975 and staffed for the first three years by two Stanford University Computer Science graduate students, Tom McWilliams and Curt Widdoes."
+    },
+    {
+      "index": 90,
+      "acronym": "SAC",
+      "long_name": "Strategic Air Command",
+      "description": "Strategic Air Command at Offutt Air Force Base"
+    },
+    {
+      "index": 91,
+      "acronym": "SANDIA",
+      "long_name": "Sandia National Laboratories",
+      "description": null
+    },
+    {
+      "index": 92,
+      "acronym": "SCOTT",
+      "long_name": "Scott Air Force Base",
+      "description": null
+    },
+    {
+      "index": 93,
+      "acronym": "SCRL",
+      "long_name": "Speech Communications Research Laboratory",
+      "description": null
+    },
+    {
+      "index": 94,
+      "acronym": "SDAC",
+      "long_name": "Seismic Data Analysis Center",
+      "description": "The Alexandria Laboratories Division of Teledyne Geotech operated the Seismic Data Analysis Center SDAC during the fifteen 15 month period beginning 1 July 1975 and ending 30 September 1976."
+    },
+    {
+      "index": 95,
+      "acronym": "SDC",
+      "long_name": "System Development Corporation",
+      "description": null
+    },
+    {
+      "index": 96,
+      "acronym": "SRI",
+      "long_name": "SRI International",
+      "description": null
+    },
+    {
+      "index": 97,
+      "acronym": "SRI 2",
+      "long_name": "SRI International",
+      "description": null
+    },
+    {
+      "index": 98,
+      "acronym": "SRI 51",
+      "long_name": "SRI International",
+      "description": null
+    },
+    {
+      "index": 99,
+      "acronym": "STANFORD",
+      "long_name": "Stanford University",
+      "description": null
+    },
+    {
+      "index": 100,
+      "acronym": "STLA",
+      "long_name": "Army Troop Support and Aviation Readiness Command (TSARCOM)",
+      "description": null
+    },
+    {
+      "index": 101,
+      "acronym": "SUMEX",
+      "long_name": "SUMEX Computer Project",
+      "description": "SUMEX Computer Project at the Stanford University Medical Center"
+    },
+    {
+      "index": 102,
+      "acronym": "TEXAS",
+      "long_name": "University of Texas",
+      "description": "University of Texas Computation Center"
+    },
+    {
+      "index": 103,
+      "acronym": "TINKER",
+      "long_name": "Tinker Air Force Base",
+      "description": null
+    },
+    {
+      "index": 104,
+      "acronym": "TSARCOM",
+      "long_name": "Army Troop Support and Aviation Readiness Command (TSARCOM)",
+      "description": null
+    },
+    {
+      "index": 105,
+      "acronym": "TYMSHARE",
+      "long_name": "Tymshare, Inc.",
+      "description": null
+    },
+    {
+      "index": 106,
+      "acronym": "UCLA",
+      "long_name": "University of California, Los Angeles",
+      "description": null
+    },
+    {
+      "index": 107,
+      "acronym": "UCSB",
+      "long_name": "University of California, Santa Barbara",
+      "description": null
+    },
+    {
+      "index": 108,
+      "acronym": "UCSD",
+      "long_name": "Univerisity of California, San Diego",
+      "description": null
+    },
+    {
+      "index": 109,
+      "acronym": "UDEL",
+      "long_name": "University of Delaware",
+      "description": null
+    },
+    {
+      "index": 110,
+      "acronym": "USC",
+      "long_name": "University of Southern California",
+      "description": null
+    },
+    {
+      "index": 111,
+      "acronym": "USC-I",
+      "long_name": "University of Southern California",
+      "description": null
+    },
+    {
+      "index": 112,
+      "acronym": "USC-ISI",
+      "long_name": "University of Southern California",
+      "description": null
+    },
+    {
+      "index": 113,
+      "acronym": "USGS 1",
+      "long_name": "U.S. Geological Survey",
+      "description": null
+    },
+    {
+      "index": 114,
+      "acronym": "USGS 2",
+      "long_name": "U.S. Geological Survey",
+      "description": null
+    },
+    {
+      "index": 115,
+      "acronym": "USGS 3",
+      "long_name": "U.S. Geological Survey",
+      "description": null
+    },
+    {
+      "index": 116,
+      "acronym": "UTAH",
+      "long_name": "University of Utah",
+      "description": null
+    },
+    {
+      "index": 117,
+      "acronym": "UWASH",
+      "long_name": "University of Washington",
+      "description": null
+    },
+    {
+      "index": 118,
+      "acronym": "UWISC",
+      "long_name": "University of Wisconsin",
+      "description": null
+    },
+    {
+      "index": 119,
+      "acronym": "WPAFB",
+      "long_name": "Wright-Patterson Air Force Base (AFB)",
+      "description": null
+    },
+    {
+      "index": 120,
+      "acronym": "WSMR",
+      "long_name": "White Sands Missile Range",
+      "description": null
+    },
+    {
+      "index": 121,
+      "acronym": "XEROX",
+      "long_name": "Xerox Corporation",
+      "description": null
+    },
+    {
+      "index": 122,
+      "acronym": "YUMA",
+      "long_name": "Army Yuma Proving Ground",
+      "description": null
+    }
+  ]
+}

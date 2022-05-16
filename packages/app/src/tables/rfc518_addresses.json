@@ -1,1 +1,315 @@
-{"schema":{"fields":[{"name":"acronym","type":"string"},{"name":"title1","type":"string"},{"name":"title2","type":"string"},{"name":"title3","type":"string"},{"name":"street","type":"string"},{"name":"city","type":"string"},{"name":"state","type":"string"},{"name":"postal_code","type":"string"},{"name":"country","type":"string"}],"pandas_version":"1.4.0"},"data":[{"acronym":"AMES-67","title1":"NASA AMES Research Center","title2":null,"title3":null,"street":"Mail Stop 233-7","city":"Moffet Field","state":"CA","postal_code":"94035","country":"USA"},{"acronym":"BBN-TNEX","title1":"Bolt, Beranek and Newman, Inc.","title2":"Research Computer Center","title3":null,"street":"50 Moulton Street","city":"Cambridge","state":"MA","postal_code":"02138","country":"USA"},{"acronym":"BBN-TENEXB","title1":"Bolt, Beranek and Newman, Inc.","title2":"Research Computer Center","title3":null,"street":"51 Moulton Street","city":"Cambridge","state":"MA","postal_code":"02138","country":"USA"},{"acronym":"CASE-10","title1":"Case Western Reserve University","title2":"Andrew R. Jennings Computing Center","title3":"Crawford Hall, Room 311","street":"10900 Euclid Avenue","city":"Cleveland","state":"OH","postal_code":"44106","country":"USA"},{"acronym":"CMU-10A","title1":"Carnegie-Mellon University","title2":"Computer Science Department","title3":null,"street":null,"city":"Pittsburg","state":"PA","postal_code":"15213","country":"USA"},{"acronym":"CMU-10B","title1":"Carnegie-Mellon University","title2":"Computer Science Department","title3":null,"street":null,"city":"Pittsburg","state":"PA","postal_code":"15213","country":"USA"},{"acronym":"CCA","title1":"Computer Corporation of America","title2":null,"title3":null,"street":"575 Technology Square","city":"Cambridge","state":"MA","postal_code":"02139","country":"USA"},{"acronym":"CULLER-HARRISON CO.","title1":null,"title2":null,"title3":null,"street":"150 Aero Camino","city":"Goleta","state":"CA","postal_code":null,"country":"USA"},{"acronym":"HARV-10","title1":"Harvard University","title2":null,"title3":null,"street":"33 Oxford Street","city":"Cambridge","state":"MA","postal_code":"02138","country":"USA"},{"acronym":"ILLIAC","title1":"Nasa-Ames Research Center","title2":"ILLIAC Project Group","title3":null,"street":"1095 Duane Court, Suite 114","city":"Sunnyvale","state":"CA","postal_code":"94016","country":"USA"},{"acronym":"LL-67","title1":null,"title2":null,"title3":null,"street":null,"city":null,"state":null,"postal_code":null,"country":null},{"acronym":"LL-TX2","title1":"MIT Lincoln Laboratory, TX-2 Group","title2":null,"title3":null,"street":"P.O. Box 73","city":"Lexington","state":"MA","postal_code":"02173","country":"USA"},{"acronym":"MIT-AI","title1":null,"title2":null,"title3":null,"street":null,"city":null,"state":null,"postal_code":null,"country":null},{"acronym":"MIT-DMCG","title1":"MIT Project MAC","title2":"Dynamic Modeling\/Computer Graphics","title3":null,"street":"545 Technology Square","city":"Cambridge","state":"MA","postal_code":"02139","country":"USA"},{"acronym":"MIT-ML","title1":"MIT Project MAC","title2":"Automatic Programming Division","title3":null,"street":"545 Technology Square, Room 201A","city":"Cambridge","state":"MA","postal_code":"02139","country":"USA"},{"acronym":"MIT-MULTICS","title1":"Project MAC, Multics Group","title2":"Massachusetts Institute of Technology","title3":null,"street":"545 Technology Square","city":"Cambridge","state":"MA","postal_code":"02139","country":"USA"},{"acronym":"SDC-ADEPT","title1":"Systems Development Corporation","title2":null,"title3":null,"street":"2500 Colorado Avenue","city":"Santa Monica","state":"CA","postal_code":"90406","country":"USA"},{"acronym":"SCRL","title1":"Speech Communications Research Laboratory","title2":null,"title3":null,"street":"800A Miramonte Drive","city":"Santa Barbara","state":"CA","postal_code":"93109","country":"USA"},{"acronym":"SRI-AI","title1":"Stanford Research Institute","title2":"Artificial Intelligence Group","title3":null,"street":"333 Ravenswood Avenue","city":"Menlo Park","state":"CA","postal_code":"94025","country":"USA"},{"acronym":"SRI-ARC","title1":"Stanford Research Institute","title2":"Augmentation Research Center","title3":null,"street":"33 Ravenswood Avenue","city":"Menlo Park","state":"CA","postal_code":"94025","country":"USA"},{"acronym":"SU-AI","title1":"Stanford Artificial Intelligence Laboratory","title2":"Computer Science Department","title3":"Stanford University","street":null,"city":"Stanford","state":"CA","postal_code":"94035","country":"USA"},{"acronym":"UCLA-CCN","title1":"Campus Computing Network","title2":"Math-Science Building","title3":"University of California","street":null,"city":"Los Angeles","state":"CA","postal_code":"90024","country":"USA"},{"acronym":"UCLA-NMC","title1":"Computer Science Department","title2":"School of Engineering & Applied Science","title3":"University of California","street":"3732 Boelter Hall","city":"Los Angeles","state":"CA","postal_code":"90024","country":"USA"},{"acronym":"UCSB-MOD75","title1":"Computer Systems Laboratory","title2":"University of California","title3":null,"street":null,"city":"Santa Barbara","state":"CA","postal_code":"93106","country":"USA"},{"acronym":"UCSD-CC","title1":"Computer Center","title2":"University of California","title3":null,"street":null,"city":"La Jolla","state":"CA","postal_code":"92037","country":"USA"},{"acronym":"USC-ISI","title1":"University of Southern California","title2":"Information Sciences Institute","title3":null,"street":"4676 Admiralty Way","city":"Marina Del Rey","state":"CA","postal_code":"90291","country":"USA"},{"acronym":"UTAH-10","title1":"University of UTAH","title2":"Computer Science Division","title3":null,"street":"3160 Merril Engineering Building","city":"Salt Lake City","state":"UT","postal_code":"84122","country":"USA"}]}
+{
+  "schema": {
+    "fields": [
+      { "name": "acronym", "type": "string" },
+      { "name": "title1", "type": "string" },
+      { "name": "title2", "type": "string" },
+      { "name": "title3", "type": "string" },
+      { "name": "street", "type": "string" },
+      { "name": "city", "type": "string" },
+      { "name": "state", "type": "string" },
+      { "name": "postal_code", "type": "string" },
+      { "name": "country", "type": "string" }
+    ],
+    "pandas_version": "1.4.0"
+  },
+  "data": [
+    {
+      "acronym": "AMES-67",
+      "title1": "NASA AMES Research Center",
+      "title2": null,
+      "title3": null,
+      "street": "Mail Stop 233-7",
+      "city": "Moffet Field",
+      "state": "CA",
+      "postal_code": "94035",
+      "country": "USA"
+    },
+    {
+      "acronym": "BBN-TNEX",
+      "title1": "Bolt, Beranek and Newman, Inc.",
+      "title2": "Research Computer Center",
+      "title3": null,
+      "street": "50 Moulton Street",
+      "city": "Cambridge",
+      "state": "MA",
+      "postal_code": "02138",
+      "country": "USA"
+    },
+    {
+      "acronym": "BBN-TENEXB",
+      "title1": "Bolt, Beranek and Newman, Inc.",
+      "title2": "Research Computer Center",
+      "title3": null,
+      "street": "51 Moulton Street",
+      "city": "Cambridge",
+      "state": "MA",
+      "postal_code": "02138",
+      "country": "USA"
+    },
+    {
+      "acronym": "CASE-10",
+      "title1": "Case Western Reserve University",
+      "title2": "Andrew R. Jennings Computing Center",
+      "title3": "Crawford Hall, Room 311",
+      "street": "10900 Euclid Avenue",
+      "city": "Cleveland",
+      "state": "OH",
+      "postal_code": "44106",
+      "country": "USA"
+    },
+    {
+      "acronym": "CMU-10A",
+      "title1": "Carnegie-Mellon University",
+      "title2": "Computer Science Department",
+      "title3": null,
+      "street": null,
+      "city": "Pittsburg",
+      "state": "PA",
+      "postal_code": "15213",
+      "country": "USA"
+    },
+    {
+      "acronym": "CMU-10B",
+      "title1": "Carnegie-Mellon University",
+      "title2": "Computer Science Department",
+      "title3": null,
+      "street": null,
+      "city": "Pittsburg",
+      "state": "PA",
+      "postal_code": "15213",
+      "country": "USA"
+    },
+    {
+      "acronym": "CCA",
+      "title1": "Computer Corporation of America",
+      "title2": null,
+      "title3": null,
+      "street": "575 Technology Square",
+      "city": "Cambridge",
+      "state": "MA",
+      "postal_code": "02139",
+      "country": "USA"
+    },
+    {
+      "acronym": "CULLER-HARRISON CO.",
+      "title1": null,
+      "title2": null,
+      "title3": null,
+      "street": "150 Aero Camino",
+      "city": "Goleta",
+      "state": "CA",
+      "postal_code": null,
+      "country": "USA"
+    },
+    {
+      "acronym": "HARV-10",
+      "title1": "Harvard University",
+      "title2": null,
+      "title3": null,
+      "street": "33 Oxford Street",
+      "city": "Cambridge",
+      "state": "MA",
+      "postal_code": "02138",
+      "country": "USA"
+    },
+    {
+      "acronym": "ILLIAC",
+      "title1": "Nasa-Ames Research Center",
+      "title2": "ILLIAC Project Group",
+      "title3": null,
+      "street": "1095 Duane Court, Suite 114",
+      "city": "Sunnyvale",
+      "state": "CA",
+      "postal_code": "94016",
+      "country": "USA"
+    },
+    {
+      "acronym": "LL-67",
+      "title1": null,
+      "title2": null,
+      "title3": null,
+      "street": null,
+      "city": null,
+      "state": null,
+      "postal_code": null,
+      "country": null
+    },
+    {
+      "acronym": "LL-TX2",
+      "title1": "MIT Lincoln Laboratory, TX-2 Group",
+      "title2": null,
+      "title3": null,
+      "street": "P.O. Box 73",
+      "city": "Lexington",
+      "state": "MA",
+      "postal_code": "02173",
+      "country": "USA"
+    },
+    {
+      "acronym": "MIT-AI",
+      "title1": null,
+      "title2": null,
+      "title3": null,
+      "street": null,
+      "city": null,
+      "state": null,
+      "postal_code": null,
+      "country": null
+    },
+    {
+      "acronym": "MIT-DMCG",
+      "title1": "MIT Project MAC",
+      "title2": "Dynamic Modeling/Computer Graphics",
+      "title3": null,
+      "street": "545 Technology Square",
+      "city": "Cambridge",
+      "state": "MA",
+      "postal_code": "02139",
+      "country": "USA"
+    },
+    {
+      "acronym": "MIT-ML",
+      "title1": "MIT Project MAC",
+      "title2": "Automatic Programming Division",
+      "title3": null,
+      "street": "545 Technology Square, Room 201A",
+      "city": "Cambridge",
+      "state": "MA",
+      "postal_code": "02139",
+      "country": "USA"
+    },
+    {
+      "acronym": "MIT-MULTICS",
+      "title1": "Project MAC, Multics Group",
+      "title2": "Massachusetts Institute of Technology",
+      "title3": null,
+      "street": "545 Technology Square",
+      "city": "Cambridge",
+      "state": "MA",
+      "postal_code": "02139",
+      "country": "USA"
+    },
+    {
+      "acronym": "SDC-ADEPT",
+      "title1": "Systems Development Corporation",
+      "title2": null,
+      "title3": null,
+      "street": "2500 Colorado Avenue",
+      "city": "Santa Monica",
+      "state": "CA",
+      "postal_code": "90406",
+      "country": "USA"
+    },
+    {
+      "acronym": "SCRL",
+      "title1": "Speech Communications Research Laboratory",
+      "title2": null,
+      "title3": null,
+      "street": "800A Miramonte Drive",
+      "city": "Santa Barbara",
+      "state": "CA",
+      "postal_code": "93109",
+      "country": "USA"
+    },
+    {
+      "acronym": "SRI-AI",
+      "title1": "Stanford Research Institute",
+      "title2": "Artificial Intelligence Group",
+      "title3": null,
+      "street": "333 Ravenswood Avenue",
+      "city": "Menlo Park",
+      "state": "CA",
+      "postal_code": "94025",
+      "country": "USA"
+    },
+    {
+      "acronym": "SRI-ARC",
+      "title1": "Stanford Research Institute",
+      "title2": "Augmentation Research Center",
+      "title3": null,
+      "street": "33 Ravenswood Avenue",
+      "city": "Menlo Park",
+      "state": "CA",
+      "postal_code": "94025",
+      "country": "USA"
+    },
+    {
+      "acronym": "SU-AI",
+      "title1": "Stanford Artificial Intelligence Laboratory",
+      "title2": "Computer Science Department",
+      "title3": "Stanford University",
+      "street": null,
+      "city": "Stanford",
+      "state": "CA",
+      "postal_code": "94035",
+      "country": "USA"
+    },
+    {
+      "acronym": "UCLA-CCN",
+      "title1": "Campus Computing Network",
+      "title2": "Math-Science Building",
+      "title3": "University of California",
+      "street": null,
+      "city": "Los Angeles",
+      "state": "CA",
+      "postal_code": "90024",
+      "country": "USA"
+    },
+    {
+      "acronym": "UCLA-NMC",
+      "title1": "Computer Science Department",
+      "title2": "School of Engineering & Applied Science",
+      "title3": "University of California",
+      "street": "3732 Boelter Hall",
+      "city": "Los Angeles",
+      "state": "CA",
+      "postal_code": "90024",
+      "country": "USA"
+    },
+    {
+      "acronym": "UCSB-MOD75",
+      "title1": "Computer Systems Laboratory",
+      "title2": "University of California",
+      "title3": null,
+      "street": null,
+      "city": "Santa Barbara",
+      "state": "CA",
+      "postal_code": "93106",
+      "country": "USA"
+    },
+    {
+      "acronym": "UCSD-CC",
+      "title1": "Computer Center",
+      "title2": "University of California",
+      "title3": null,
+      "street": null,
+      "city": "La Jolla",
+      "state": "CA",
+      "postal_code": "92037",
+      "country": "USA"
+    },
+    {
+      "acronym": "USC-ISI",
+      "title1": "University of Southern California",
+      "title2": "Information Sciences Institute",
+      "title3": null,
+      "street": "4676 Admiralty Way",
+      "city": "Marina Del Rey",
+      "state": "CA",
+      "postal_code": "90291",
+      "country": "USA"
+    },
+    {
+      "acronym": "UTAH-10",
+      "title1": "University of UTAH",
+      "title2": "Computer Science Division",
+      "title3": null,
+      "street": "3160 Merril Engineering Building",
+      "city": "Salt Lake City",
+      "state": "UT",
+      "postal_code": "84122",
+      "country": "USA"
+    }
+  ]
+}

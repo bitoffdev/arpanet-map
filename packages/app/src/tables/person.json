@@ -1,1 +1,190 @@
-{"schema":{"fields":[{"name":"index","type":"integer"},{"name":"id","type":"integer"},{"name":"full_name","type":"string"},{"name":"nickname","type":"string"},{"name":"wikidata_id","type":"string"}],"primaryKey":["index"],"pandas_version":"1.4.0"},"data":[{"index":0,"id":1,"full_name":"Alex McKenzie","nickname":"Alex McKenzie","wikidata_id":null},{"index":1,"id":2,"full_name":"Andy Moorer","nickname":"Andy Moorer","wikidata_id":null},{"index":2,"id":3,"full_name":"Barry Wessler","nickname":"Barry Wessler","wikidata_id":null},{"index":3,"id":4,"full_name":"Robert T. Braden","nickname":"Bob Braden","wikidata_id":"Q4931909"},{"index":4,"id":5,"full_name":"Bob Bressler","nickname":"Bob Bressler","wikidata_id":null},{"index":5,"id":6,"full_name":null,"nickname":"Bob Long","wikidata_id":null},{"index":6,"id":7,"full_name":"Robert L. Sundberg","nickname":"Bob Sundberg","wikidata_id":null},{"index":7,"id":8,"full_name":null,"nickname":"Charles Rose","wikidata_id":null},{"index":8,"id":9,"full_name":"Daniel L. Murphy","nickname":"Dan Murphy","wikidata_id":"Q528318"},{"index":9,"id":10,"full_name":null,"nickname":"Eric Harslem","wikidata_id":null},{"index":10,"id":11,"full_name":"Hal Van Zoeren","nickname":"Hal VanZoeren","wikidata_id":null},{"index":11,"id":12,"full_name":"James M. Pepin","nickname":"Jim Pepin","wikidata_id":null},{"index":12,"id":13,"full_name":null,"nickname":"Jeff Rubin","wikidata_id":null},{"index":13,"id":14,"full_name":null,"nickname":"Jim White","wikidata_id":null},{"index":14,"id":15,"full_name":null,"nickname":"Joel Winett","wikidata_id":null},{"index":15,"id":16,"full_name":null,"nickname":"John Cravits","wikidata_id":null},{"index":16,"id":17,"full_name":null,"nickname":"John McConnell","wikidata_id":null},{"index":17,"id":18,"full_name":"Jonathan Bruce Postel","nickname":"Jon Postel","wikidata_id":"Q92623"},{"index":18,"id":19,"full_name":null,"nickname":"Len Chaiten","wikidata_id":null},{"index":19,"id":20,"full_name":"Michael A. Padlipsky","nickname":"Mike Padlipsky","wikidata_id":"Q6828087"},{"index":20,"id":21,"full_name":null,"nickname":"Robert Rosenthal","wikidata_id":null},{"index":21,"id":22,"full_name":null,"nickname":"Ron Stoughton","wikidata_id":null},{"index":22,"id":23,"full_name":"Thomas J. Barkelow","nickname":"Tom Barkelow","wikidata_id":null},{"index":23,"id":24,"full_name":"Wayne Hathaway","nickname":"Wayne Hathaway","wikidata_id":null},{"index":24,"id":25,"full_name":"William Kantrowitz","nickname":"Will Kantrowitz","wikidata_id":null}]}
+{
+  "schema": {
+    "fields": [
+      { "name": "index", "type": "integer" },
+      { "name": "id", "type": "integer" },
+      { "name": "full_name", "type": "string" },
+      { "name": "nickname", "type": "string" },
+      { "name": "wikidata_id", "type": "string" }
+    ],
+    "primaryKey": ["index"],
+    "pandas_version": "1.4.0"
+  },
+  "data": [
+    {
+      "index": 0,
+      "id": 1,
+      "full_name": "Alex McKenzie",
+      "nickname": "Alex McKenzie",
+      "wikidata_id": null
+    },
+    {
+      "index": 1,
+      "id": 2,
+      "full_name": "Andy Moorer",
+      "nickname": "Andy Moorer",
+      "wikidata_id": null
+    },
+    {
+      "index": 2,
+      "id": 3,
+      "full_name": "Barry Wessler",
+      "nickname": "Barry Wessler",
+      "wikidata_id": null
+    },
+    {
+      "index": 3,
+      "id": 4,
+      "full_name": "Robert T. Braden",
+      "nickname": "Bob Braden",
+      "wikidata_id": "Q4931909"
+    },
+    {
+      "index": 4,
+      "id": 5,
+      "full_name": "Bob Bressler",
+      "nickname": "Bob Bressler",
+      "wikidata_id": null
+    },
+    {
+      "index": 5,
+      "id": 6,
+      "full_name": null,
+      "nickname": "Bob Long",
+      "wikidata_id": null
+    },
+    {
+      "index": 6,
+      "id": 7,
+      "full_name": "Robert L. Sundberg",
+      "nickname": "Bob Sundberg",
+      "wikidata_id": null
+    },
+    {
+      "index": 7,
+      "id": 8,
+      "full_name": null,
+      "nickname": "Charles Rose",
+      "wikidata_id": null
+    },
+    {
+      "index": 8,
+      "id": 9,
+      "full_name": "Daniel L. Murphy",
+      "nickname": "Dan Murphy",
+      "wikidata_id": "Q528318"
+    },
+    {
+      "index": 9,
+      "id": 10,
+      "full_name": null,
+      "nickname": "Eric Harslem",
+      "wikidata_id": null
+    },
+    {
+      "index": 10,
+      "id": 11,
+      "full_name": "Hal Van Zoeren",
+      "nickname": "Hal VanZoeren",
+      "wikidata_id": null
+    },
+    {
+      "index": 11,
+      "id": 12,
+      "full_name": "James M. Pepin",
+      "nickname": "Jim Pepin",
+      "wikidata_id": null
+    },
+    {
+      "index": 12,
+      "id": 13,
+      "full_name": null,
+      "nickname": "Jeff Rubin",
+      "wikidata_id": null
+    },
+    {
+      "index": 13,
+      "id": 14,
+      "full_name": null,
+      "nickname": "Jim White",
+      "wikidata_id": null
+    },
+    {
+      "index": 14,
+      "id": 15,
+      "full_name": null,
+      "nickname": "Joel Winett",
+      "wikidata_id": null
+    },
+    {
+      "index": 15,
+      "id": 16,
+      "full_name": null,
+      "nickname": "John Cravits",
+      "wikidata_id": null
+    },
+    {
+      "index": 16,
+      "id": 17,
+      "full_name": null,
+      "nickname": "John McConnell",
+      "wikidata_id": null
+    },
+    {
+      "index": 17,
+      "id": 18,
+      "full_name": "Jonathan Bruce Postel",
+      "nickname": "Jon Postel",
+      "wikidata_id": "Q92623"
+    },
+    {
+      "index": 18,
+      "id": 19,
+      "full_name": null,
+      "nickname": "Len Chaiten",
+      "wikidata_id": null
+    },
+    {
+      "index": 19,
+      "id": 20,
+      "full_name": "Michael A. Padlipsky",
+      "nickname": "Mike Padlipsky",
+      "wikidata_id": "Q6828087"
+    },
+    {
+      "index": 20,
+      "id": 21,
+      "full_name": null,
+      "nickname": "Robert Rosenthal",
+      "wikidata_id": null
+    },
+    {
+      "index": 21,
+      "id": 22,
+      "full_name": null,
+      "nickname": "Ron Stoughton",
+      "wikidata_id": null
+    },
+    {
+      "index": 22,
+      "id": 23,
+      "full_name": "Thomas J. Barkelow",
+      "nickname": "Tom Barkelow",
+      "wikidata_id": null
+    },
+    {
+      "index": 23,
+      "id": 24,
+      "full_name": "Wayne Hathaway",
+      "nickname": "Wayne Hathaway",
+      "wikidata_id": null
+    },
+    {
+      "index": 24,
+      "id": 25,
+      "full_name": "William Kantrowitz",
+      "nickname": "Will Kantrowitz",
+      "wikidata_id": null
+    }
+  ]
+}

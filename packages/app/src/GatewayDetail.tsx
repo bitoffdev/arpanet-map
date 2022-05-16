@@ -4,17 +4,16 @@ import { GatewayType } from "arpanet-map";
 import { getComputerModel, getPerson } from "./Data";
 import { InfoTooltip } from "./InfoTooltip";
 import WikipediaAnchor from "./WikipediaAnchor";
-import {Address, gatewayFromId} from "./model";
+import { Address, gatewayFromId } from "./model";
 import { FaLink } from "react-icons/fa";
 
-
 const StyledAddressContainer = styled.div`
-background-color: #eee;
-border: 2px solid purple;
-border-radius: 10px;
-padding: 0px;
-margin-top: 5px;
-margin-bottom: 5px;
+  background-color: #eee;
+  border: 2px solid purple;
+  border-radius: 10px;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 
 const StyledAddressHeader = styled.div`
@@ -91,35 +90,52 @@ const addrToJSX = (addr: Address) => {
   return (
     <StyledAddressContainer>
       <StyledAddressHeader>
-        <a href={addr.reference.url} rel="noreferrer" target="_blank" style={{textDecoration: "none", color: "white"}}>
+        <a
+          href={addr.reference.url}
+          rel="noreferrer"
+          target="_blank"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           <FaLink /> Address from {addr.reference.name}
         </a>
       </StyledAddressHeader>
       <StyledAddressBody>
         <table>
-          {addr.title1 != null &&
-            <tr><td>{addr.title1}</td></tr>
-          }
-          {addr.title2 != null &&
-            <tr><td>{addr.title2}</td></tr>
-          }
-          {addr.title3 != null &&
-            <tr><td>{addr.title3}</td></tr>
-          }
-          {addr.street != null &&
-            <tr><td>{addr.street}</td></tr>
-          }
-          <tr><td>{addr.city}, {addr.state} {addr.postal_code}</td></tr>
+          {addr.title1 != null && (
+            <tr>
+              <td>{addr.title1}</td>
+            </tr>
+          )}
+          {addr.title2 != null && (
+            <tr>
+              <td>{addr.title2}</td>
+            </tr>
+          )}
+          {addr.title3 != null && (
+            <tr>
+              <td>{addr.title3}</td>
+            </tr>
+          )}
+          {addr.street != null && (
+            <tr>
+              <td>{addr.street}</td>
+            </tr>
+          )}
+          <tr>
+            <td>
+              {addr.city}, {addr.state} {addr.postal_code}
+            </td>
+          </tr>
         </table>
       </StyledAddressBody>
     </StyledAddressContainer>
   );
-}
+};
 
 export default function GatewayDetail({ gateway }: GatewayDetailProps) {
   const [statusReports, setStatusReports] = useState<Array<any>>([]);
 
-  const gw = gatewayFromId( gateway.gatewayId );
+  const gw = gatewayFromId(gateway.gatewayId);
 
   useEffect(() => {
     setStatusReports(() => []);
@@ -143,7 +159,7 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
       {gw.addresses.map(addrToJSX)}
 
       {gateway.wikidataId && (
-        <div style={{marginTop: "15px"}}>
+        <div style={{ marginTop: "15px" }}>
           <WikipediaAnchor wikidataId={gateway.wikidataId}>
             Wikipedia
           </WikipediaAnchor>
