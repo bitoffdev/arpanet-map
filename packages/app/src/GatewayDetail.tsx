@@ -4,13 +4,17 @@ import { GatewayType } from "arpanet-map";
 import { getComputerModel, getPerson } from "./Data";
 import { InfoTooltip } from "./InfoTooltip";
 import WikipediaAnchor from "./WikipediaAnchor";
-import {Address, gatewayFromId, Reference} from "./model";
+import {Address, gatewayFromId} from "./model";
+import { FaLink } from "react-icons/fa";
+
 
 const StyledAddressContainer = styled.div`
 background-color: #eee;
 border: 2px solid purple;
 border-radius: 10px;
 padding: 0px;
+margin-top: 5px;
+margin-bottom: 5px;
 `;
 
 const StyledAddressHeader = styled.div`
@@ -88,7 +92,7 @@ const addrToJSX = (addr: Address) => {
     <StyledAddressContainer>
       <StyledAddressHeader>
         <a href={addr.reference.url} rel="noreferrer" target="_blank" style={{textDecoration: "none", color: "white"}}>
-          Address from {addr.reference.name}
+          <FaLink /> Address from {addr.reference.name}
         </a>
       </StyledAddressHeader>
       <StyledAddressBody>
@@ -134,13 +138,16 @@ export default function GatewayDetail({ gateway }: GatewayDetailProps) {
   return (
     <StyledGatewayDetailDiv>
       <h1>{gateway.name}</h1>
-      <h2>{gateway.longName}</h2>
+      <h2>{gw.long_name}</h2>
+      <p>{gw.description}</p>
       {gw.addresses.map(addrToJSX)}
-      {gateway.address && <p>{gateway.address}</p>}
+
       {gateway.wikidataId && (
-        <WikipediaAnchor wikidataId={gateway.wikidataId}>
-          Wikipedia
-        </WikipediaAnchor>
+        <div style={{marginTop: "15px"}}>
+          <WikipediaAnchor wikidataId={gateway.wikidataId}>
+            Wikipedia
+          </WikipediaAnchor>
+        </div>
       )}
       <h2>
         <span style={{ marginRight: "10px" }}>Status Reports</span>
